@@ -1,0 +1,321 @@
+{
+  "site": {
+    "name": "Hope & Heart Foundation",
+    "tagline": "Empowering Communities, Transforming Lives",
+    "description": "A nonprofit dedicated to creating lasting change through education, support, and community programs."
+  },
+  "navigation": {
+    "links": [
+      { "label": "Home", "href": "/" },
+      { "label": "About", "href": "/about" },
+      { "label": "Programs", "href": "/programs" },
+      { "label": "Services", "href": "/services" },
+      { "label": "FAQ", "href": "/faq" },
+      { "label": "Contact", "href": "/contact" },
+      { "label": "Apply Now", "href": "/apply" }
+    ]
+  },
+  "home": {
+    "hero": {
+      "title": "Together, We Build Brighter Futures",
+      "subtitle": "Join us in making a meaningful difference in the lives of those who need it most.",
+      "primaryCTA": { "text": "Donate Now", "href": "/donate" },
+      "secondaryCTA": { "text": "Learn More", "href": "/about" }
+    },
+    "mission": {
+      "title": "Our Mission",
+      "content": "We believe every person deserves access to education, resources, and opportunities. Through our comprehensive programs, we empower individuals and families to overcome challenges and build sustainable, fulfilling lives."
+    },
+    "stats": [
+      { "value": "10,000+", "label": "Lives Impacted" },
+      { "value": "25", "label": "Community Programs" },
+      { "value": "500+", "label": "Active Volunteers" },
+      { "value": "15", "label": "Years of Service" }
+    ],
+    "callToAction": {
+      "title": "Ready to Make a Difference?",
+      "content": "Whether you want to volunteer, donate, or apply for our programs, we're here to help you get started.",
+      "buttons": [
+        { "text": "View Programs", "href": "/programs" },
+        { "text": "Apply Now", "href": "/apply" },
+        { "text": "Donate", "href": "/donate" }
+      ]
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "Building Communities Through Compassion and Action",
+    "mission": {
+      "title": "Our Mission",
+      "content": "Hope & Heart Foundation is dedicated to breaking cycles of poverty and inequality through education, mentorship, and direct support services. We work hand-in-hand with community members to identify needs and create sustainable solutions."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "content": "We envision a world where every individual has access to the resources, opportunities, and support they need to thrive. Through collaborative efforts and unwavering commitment, we strive to create lasting positive change in every community we serve."
+    },
+    "story": {
+      "title": "Our Story",
+      "content": "Founded in 2010, Hope & Heart Foundation began as a small grassroots initiative to provide after-school tutoring to underserved youth. Over the past 15 years, we've grown into a comprehensive nonprofit serving thousands of families through education programs, job training, mental health services, and emergency assistance. Our growth has been guided by one principle: listen to the community and respond with dignity, respect, and meaningful action."
+    },
+    "values": [
+      { "title": "Compassion", "description": "We approach every interaction with empathy and understanding." },
+      { "title": "Integrity", "description": "We maintain the highest standards of transparency and accountability." },
+      { "title": "Empowerment", "description": "We provide tools and resources that enable lasting self-sufficiency." },
+      { "title": "Collaboration", "description": "We work together with community partners to maximize our impact." }
+    ]
+  },
+  "programs": {
+    "title": "Our Programs",
+    "subtitle": "Comprehensive Support for Every Stage of Life",
+    "intro": "We offer a wide range of programs designed to address the diverse needs of our community members. Each program is carefully crafted with input from those we serve.",
+    "items": [
+      {
+        "title": "Youth Education & Mentorship",
+        "description": "After-school tutoring, mentorship programs, and college preparation support for students K-12. We provide one-on-one academic assistance, SAT prep, and guidance through the college application process.",
+        "cta": { "text": "Learn More", "href": "/programs#youth" }
+      },
+      {
+        "title": "Adult Job Training",
+        "description": "Skills training, resume building, interview preparation, and job placement assistance for adults seeking employment or career advancement. Includes certifications in various trades and professional development workshops.",
+        "cta": { "text": "Learn More", "href": "/programs#job-training" }
+      },
+      {
+        "title": "Family Support Services",
+        "description": "Comprehensive support including food assistance, housing resources, childcare referrals, and family counseling. We help families navigate challenging times and connect them with essential community resources.",
+        "cta": { "text": "Learn More", "href": "/programs#family" }
+      },
+      {
+        "title": "Mental Health & Wellness",
+        "description": "Free and low-cost counseling services, support groups, and wellness workshops. Our licensed therapists and counselors provide confidential support for individuals and families dealing with stress, trauma, and mental health challenges.",
+        "cta": { "text": "Learn More", "href": "/programs#mental-health" }
+      },
+      {
+        "title": "Senior Companion Program",
+        "description": "Social connection, wellness checks, and assistance with daily tasks for isolated seniors. Our trained volunteers provide companionship, help with errands, and ensure seniors remain safe and engaged in the community.",
+        "cta": { "text": "Learn More", "href": "/programs#seniors" }
+      },
+      {
+        "title": "Emergency Assistance",
+        "description": "Rapid response support for families facing immediate crises, including utility assistance, emergency food, temporary housing, and crisis counseling. Available 24/7 for urgent needs.",
+        "cta": { "text": "Learn More", "href": "/programs#emergency" }
+      }
+    ]
+  },
+  "services": {
+    "title": "Services We Offer",
+    "subtitle": "Accessible Resources When You Need Them Most",
+    "intro": "Our services are designed to be accessible, respectful, and responsive to your unique situation. All services are provided at no cost or on a sliding scale based on ability to pay.",
+    "categories": [
+      {
+        "name": "Direct Services",
+        "items": [
+          "Individual & Family Counseling",
+          "Food Pantry & Hot Meals",
+          "Clothing & Household Items",
+          "Transportation Assistance",
+          "Technology Access & Digital Literacy"
+        ]
+      },
+      {
+        "name": "Educational Support",
+        "items": [
+          "Tutoring & Academic Support",
+          "GED Preparation",
+          "English Language Learning (ESL)",
+          "Financial Literacy Workshops",
+          "Parenting Classes"
+        ]
+      },
+      {
+        "name": "Career Development",
+        "items": [
+          "Resume & Cover Letter Writing",
+          "Interview Coaching",
+          "Professional Certifications",
+          "Networking Events",
+          "Small Business Support"
+        ]
+      },
+      {
+        "name": "Resource Navigation",
+        "items": [
+          "Housing Assistance Referrals",
+          "Healthcare Enrollment Support",
+          "Legal Aid Connections",
+          "Childcare Resources",
+          "Benefits Application Help"
+        ]
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "We're Here to Help",
+    "intro": "Have questions? We've compiled answers to the most common inquiries. If you don't see your question here, please contact us directly.",
+    "items": [
+      {
+        "question": "Who is eligible for your programs?",
+        "answer": "Our programs are open to all community members regardless of income, background, or circumstances. Some programs may have specific eligibility criteria based on funding requirements, but we work to ensure everyone who needs support can access our services."
+      },
+      {
+        "question": "How do I apply for services?",
+        "answer": "You can apply by visiting our office during business hours, calling our main line, or submitting an application through our Apply Now page. Our intake coordinators will guide you through the process and help you access the services you need."
+      },
+      {
+        "question": "Is there a cost for services?",
+        "answer": "Most of our services are completely free. Some programs may have a sliding scale fee based on ability to pay, but no one is ever turned away due to inability to pay."
+      },
+      {
+        "question": "How can I volunteer?",
+        "answer": "We welcome volunteers! Visit our Contact page to express your interest, and our volunteer coordinator will reach out to discuss opportunities that match your skills and availability. We provide training and ongoing support for all volunteers."
+      },
+      {
+        "question": "Are donations tax-deductible?",
+        "answer": "Yes! Hope & Heart Foundation is a 501(c)(3) nonprofit organization. All donations are tax-deductible to the fullest extent allowed by law. You will receive a receipt for your records."
+      },
+      {
+        "question": "How do you ensure my privacy?",
+        "answer": "We take privacy seriously. All personal information is kept confidential and secure. We comply with all relevant privacy laws and never share your information without your explicit consent, except as required by law."
+      },
+      {
+        "question": "What areas do you serve?",
+        "answer": "We primarily serve residents of [Your City/County], but some programs are available to neighboring communities. Contact us to learn if you're within our service area."
+      },
+      {
+        "question": "How is the organization funded?",
+        "answer": "We're funded through a combination of individual donations, corporate partnerships, foundation grants, and government contracts. We maintain transparency through our annual reports, which are available on our website."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "We're Here to Listen",
+    "intro": "Have questions or need assistance? Our team is ready to help. Reach out using any of the methods below.",
+    "information": {
+      "address": {
+        "label": "Address",
+        "value": "123 Community Way\nYour City, ST 12345"
+      },
+      "phone": {
+        "label": "Phone",
+        "value": "(555) 123-4567"
+      },
+      "email": {
+        "label": "Email",
+        "value": "info@hopeheart.org"
+      },
+      "hours": {
+        "label": "Office Hours",
+        "value": "Monday - Friday: 9:00 AM - 5:00 PM\nSaturday: 10:00 AM - 2:00 PM\nSunday: Closed"
+      }
+    },
+    "formFields": [
+      { "name": "name", "label": "Full Name", "type": "text", "required": true },
+      { "name": "email", "label": "Email Address", "type": "email", "required": true },
+      { "name": "phone", "label": "Phone Number", "type": "tel", "required": false },
+      { "name": "subject", "label": "Subject", "type": "text", "required": true },
+      { "name": "message", "label": "Message", "type": "textarea", "required": true }
+    ]
+  },
+  "apply": {
+    "title": "Apply for Services",
+    "subtitle": "Take the First Step Toward Support",
+    "intro": "We're glad you're here. Applying for services is the first step toward getting the support you need. Our intake team will review your application and contact you within 2-3 business days to discuss next steps.",
+    "notice": "All information provided is kept strictly confidential and is used only to connect you with appropriate services.",
+    "formSections": [
+      {
+        "title": "Personal Information",
+        "fields": [
+          { "name": "firstName", "label": "First Name", "type": "text", "required": true },
+          { "name": "lastName", "label": "Last Name", "type": "text", "required": true },
+          { "name": "dateOfBirth", "label": "Date of Birth", "type": "date", "required": true },
+          { "name": "email", "label": "Email Address", "type": "email", "required": true },
+          { "name": "phone", "label": "Phone Number", "type": "tel", "required": true }
+        ]
+      },
+      {
+        "title": "Household Information",
+        "fields": [
+          { "name": "address", "label": "Street Address", "type": "text", "required": true },
+          { "name": "city", "label": "City", "type": "text", "required": true },
+          { "name": "state", "label": "State", "type": "text", "required": true },
+          { "name": "zipCode", "label": "ZIP Code", "type": "text", "required": true },
+          { "name": "householdSize", "label": "Number of People in Household", "type": "number", "required": true }
+        ]
+      },
+      {
+        "title": "Services Requested",
+        "fields": [
+          {
+            "name": "servicesNeeded",
+            "label": "Which services are you interested in? (Select all that apply)",
+            "type": "checkbox-group",
+            "options": [
+              "Youth Education & Mentorship",
+              "Adult Job Training",
+              "Family Support Services",
+              "Mental Health & Wellness",
+              "Senior Companion Program",
+              "Emergency Assistance"
+            ]
+          },
+          {
+            "name": "additionalInfo",
+            "label": "Please share any additional information that will help us serve you better",
+            "type": "textarea",
+            "required": false
+          }
+        ]
+      }
+    ]
+  },
+  "donate": {
+    "title": "Make a Donation",
+    "subtitle": "Your Generosity Changes Lives",
+    "intro": "Every donation, no matter the size, makes a real difference in the lives of those we serve. Your support helps us continue providing essential services to thousands of community members each year.",
+    "impact": {
+      "title": "Your Impact",
+      "examples": [
+        { "amount": "$25", "description": "Provides a week of healthy meals for a family in need" },
+        { "amount": "$50", "description": "Covers tutoring supplies for a student for one month" },
+        { "amount": "$100", "description": "Funds a job training workshop for 10 participants" },
+        { "amount": "$250", "description": "Supports a month of counseling sessions for a family in crisis" },
+        { "amount": "$500", "description": "Sponsors emergency assistance for multiple families" }
+      ]
+    },
+    "comingSoon": {
+      "title": "Online Donations Coming Soon",
+      "message": "We're currently setting up secure online donation processing. In the meantime, you can donate by:",
+      "methods": [
+        {
+          "title": "Mail a Check",
+          "description": "Make checks payable to Hope & Heart Foundation and mail to:\n123 Community Way, Your City, ST 12345"
+        },
+        {
+          "title": "Call Us",
+          "description": "Call (555) 123-4567 to donate over the phone with a credit card"
+        },
+        {
+          "title": "Visit in Person",
+          "description": "Stop by our office during business hours to make a donation"
+        }
+      ]
+    },
+    "taxInfo": "Hope & Heart Foundation is a 501(c)(3) tax-exempt organization. Tax ID: 12-3456789. Your donation is tax-deductible to the fullest extent allowed by law."
+  },
+  "footer": {
+    "tagline": "Empowering Communities, Transforming Lives",
+    "social": [
+      { "platform": "Facebook", "url": "#" },
+      { "platform": "Twitter", "url": "#" },
+      { "platform": "Instagram", "url": "#" },
+      { "platform": "LinkedIn", "url": "#" }
+    ],
+    "quickLinks": [
+      { "label": "Privacy Policy", "href": "/privacy" },
+      { "label": "Terms of Service", "href": "/terms" },
+      { "label": "Annual Reports", "href": "/reports" }
+    ],
+    "copyright": "© 2025 Hope & Heart Foundation. All rights reserved."
+  }
+}
