@@ -1,6 +1,6 @@
 {
   "site": {
-    "name": "Hope & Heart Foundation",
+    "name": "New Purpose House",
     "tagline": "Empowering Communities, Transforming Lives",
     "description": "A nonprofit dedicated to creating lasting change through education, support, and community programs."
   },
@@ -47,7 +47,7 @@
     "subtitle": "Building Communities Through Compassion and Action",
     "mission": {
       "title": "Our Mission",
-      "content": "Hope & Heart Foundation is dedicated to breaking cycles of poverty and inequality through education, mentorship, and direct support services. We work hand-in-hand with community members to identify needs and create sustainable solutions."
+      "content": "New Purpose House is dedicated to breaking cycles of poverty and inequality through education, mentorship, and direct support services. We work hand-in-hand with community members to identify needs and create sustainable solutions."
     },
     "vision": {
       "title": "Our Vision",
@@ -55,7 +55,7 @@
     },
     "story": {
       "title": "Our Story",
-      "content": "Founded in 2010, Hope & Heart Foundation began as a small grassroots initiative to provide after-school tutoring to underserved youth. Over the past 15 years, we've grown into a comprehensive nonprofit serving thousands of families through education programs, job training, mental health services, and emergency assistance. Our growth has been guided by one principle: listen to the community and respond with dignity, respect, and meaningful action."
+      "content": "Founded in 2010, New Purpose House began as a small grassroots initiative to provide after-school tutoring to underserved youth. Over the past 15 years, we've grown into a comprehensive nonprofit serving thousands of families through education programs, job training, mental health services, and emergency assistance. Our growth has been guided by one principle: listen to the community and respond with dignity, respect, and meaningful action."
     },
     "values": [
       { "title": "Compassion", "description": "We approach every interaction with empathy and understanding." },
@@ -69,11 +69,6 @@
     "subtitle": "Comprehensive Support for Every Stage of Life",
     "intro": "We offer a wide range of programs designed to address the diverse needs of our community members. Each program is carefully crafted with input from those we serve.",
     "items": [
-      {
-        "title": "Youth Education & Mentorship",
-        "description": "After-school tutoring, mentorship programs, and college preparation support for students K-12. We provide one-on-one academic assistance, SAT prep, and guidance through the college application process.",
-        "cta": { "text": "Learn More", "href": "/programs#youth" }
-      },
       {
         "title": "Adult Job Training",
         "description": "Skills training, resume building, interview preparation, and job placement assistance for adults seeking employment or career advancement. Includes certifications in various trades and professional development workshops.",
@@ -171,7 +166,7 @@
       },
       {
         "question": "Are donations tax-deductible?",
-        "answer": "Yes! Hope & Heart Foundation is a 501(c)(3) nonprofit organization. All donations are tax-deductible to the fullest extent allowed by law. You will receive a receipt for your records."
+        "answer": "Yes! New Purpose House is a 501(c)(3) nonprofit organization. All donations are tax-deductible to the fullest extent allowed by law. You will receive a receipt for your records."
       },
       {
         "question": "How do you ensure my privacy?",
@@ -202,7 +197,7 @@
       },
       "email": {
         "label": "Email",
-        "value": "info@hopeheart.org"
+        "value": "info@newpurposehouse.org"
       },
       "hours": {
         "label": "Office Hours",
@@ -289,7 +284,7 @@
       "methods": [
         {
           "title": "Mail a Check",
-          "description": "Make checks payable to Hope & Heart Foundation and mail to:\n123 Community Way, Your City, ST 12345"
+          "description": "Make checks payable to New Purpose House and mail to:\n123 Community Way, Your City, ST 12345"
         },
         {
           "title": "Call Us",
@@ -301,7 +296,7 @@
         }
       ]
     },
-    "taxInfo": "Hope & Heart Foundation is a 501(c)(3) tax-exempt organization. Tax ID: 12-3456789. Your donation is tax-deductible to the fullest extent allowed by law."
+    "taxInfo": "New Purpose House is a 501(c)(3) tax-exempt organization. Tax ID: 12-3456789. Your donation is tax-deductible to the fullest extent allowed by law."
   },
   "footer": {
     "tagline": "Empowering Communities, Transforming Lives",
@@ -316,6 +311,6 @@
       { "label": "Terms of Service", "href": "/terms" },
       { "label": "Annual Reports", "href": "/reports" }
     ],
-    "copyright": "© 2025 Hope & Heart Foundation. All rights reserved."
+    "copyright": "© 2025 New Purpose House. All rights reserved."
   }
 }
