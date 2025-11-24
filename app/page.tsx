@@ -9,38 +9,46 @@ export default function HomePage() {
     <>
       <Header />
       <main className="flex-1">
-        {/* Hero Section */}
-        <section className="relative py-20 md:py-32 bg-muted/30">
-          <div className="container">
-            <div className="mx-auto max-w-3xl text-center">
-              <h1 className="text-4xl font-bold tracking-tight text-balance sm:text-6xl mb-6">
-                {content.home.hero.title}
-              </h1>
-              <p className="text-lg text-muted-foreground mb-8 text-balance">{content.home.hero.subtitle}</p>
-              <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
-                <Button asChild size="lg" className="bg-emerald-700 hover:bg-emerald-800 text-white">
-                  <Link href={content.home.hero.primaryCTA.href}>{content.home.hero.primaryCTA.text}</Link>
-                </Button>
-                <Button asChild size="lg" variant="outline">
-                  <Link href={content.home.hero.secondaryCTA.href}>{content.home.hero.secondaryCTA.text}</Link>
-                </Button>
+        {/* Fixed Background Image Container */}
+        <div 
+          className="fixed-hero-banner"
+          style={{ '--hero-image': `url('${content.home.hero.image}')` } as React.CSSProperties}
+        >
+          {/* Hero Section */}
+          <section className="relative py-20 md:py-32 min-h-screen flex items-center">
+            <div className="absolute inset-0 bg-hero-overlay"></div>
+            <div className="container relative z-10">
+              <div className="mx-auto max-w-3xl text-center">
+                <h1 className="text-4xl font-bold tracking-tight text-balance sm:text-6xl mb-6 text-white drop-shadow-lg">
+                  {content.home.hero.title}
+                </h1>
+                <p className="text-lg text-white/90 mb-8 text-balance drop-shadow-md">{content.home.hero.subtitle}</p>
+                <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
+                  <Button asChild size="lg" className="bg-emerald-700 hover:bg-emerald-800 text-white">
+                    <Link href={content.home.hero.primaryCTA.href}>{content.home.hero.primaryCTA.text}</Link>
+                  </Button>
+                  <Button asChild size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20">
+                    <Link href={content.home.hero.secondaryCTA.href}>{content.home.hero.secondaryCTA.text}</Link>
+                  </Button>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* Mission Section */}
-        <section className="py-16 md:py-24">
-          <div className="container">
-            <div className="mx-auto max-w-3xl text-center">
-              <h2 className="text-3xl font-bold mb-6">{content.home.mission.title}</h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">{content.home.mission.content}</p>
+          {/* Mission Section */}
+          <section className="relative py-16 md:py-24 min-h-[60vh] flex items-center bg-white">
+            <div className="absolute inset-0"></div>
+            <div className="container relative z-10">
+              <div className="mx-auto max-w-3xl text-center">
+                <h2 className="text-3xl font-bold mb-6 text-black drop-shadow-lg">{content.home.mission.title}</h2>
+                <p className="text-lg text-black/90 leading-relaxed drop-shadow-md">{content.home.mission.content}</p>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
 
         {/* Stats Section */}
-        <section className="py-16 bg-emerald-700 text-white">
+        <section className="py-16 bg-primary text-white">
           <div className="container">
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
               {content.home.stats.map((stat, index) => (

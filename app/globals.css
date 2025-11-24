@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+
 @custom-variant dark (&:is(.dark *));
 
 :root {
@@ -10,7 +11,7 @@
   --card-foreground: oklch(0.18 0.02 106);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.18 0.02 106);
-  --primary: oklch(0.45 0.12 164);
+  --primary: oklch(82.3% 0.12 346.018);
   --primary-foreground: oklch(0.99 0.005 106);
   --secondary: oklch(0.96 0.01 106);
   --secondary-foreground: oklch(0.18 0.02 106);
@@ -46,8 +47,8 @@
   --card-foreground: oklch(0.98 0.005 106);
   --popover: oklch(0.15 0.02 106);
   --popover-foreground: oklch(0.98 0.005 106);
-  --primary: oklch(0.55 0.15 164);
-  --primary-foreground: oklch(0.15 0.02 106);
+  --primary: oklch(82.3% 0.12 346.018);
+  --primary-foreground: oklch(83.3% 0.145 321.434);
   --secondary: oklch(0.25 0.02 106);
   --secondary-foreground: oklch(0.98 0.005 106);
   --muted: oklch(0.25 0.02 106);
@@ -121,4 +122,33 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Fixed Hero Banner with Parallax Effect */
+.fixed-hero-banner {
+  position: relative;
+  background-image: var(--hero-image, url('/placeholder.jpg'));
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.bg-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  z-index: 1;
+}
+
+/* Ensure content scrolls over the fixed background */
+.fixed-hero-banner section {
+  position: relative;
+  z-index: 2;
 }

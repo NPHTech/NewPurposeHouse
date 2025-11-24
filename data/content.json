@@ -17,6 +17,7 @@
   },
   "home": {
     "hero": {
+      "image": "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=1920&q=80",
       "title": "Together, We Build Brighter Futures",
       "subtitle": "Join us in making a meaningful difference in the lives of those who need it most.",
       "primaryCTA": { "text": "Donate Now", "href": "/donate" },
