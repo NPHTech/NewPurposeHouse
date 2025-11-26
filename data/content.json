@@ -11,22 +11,22 @@
       { "label": "Programs", "href": "/programs" },
       { "label": "Services", "href": "/services" },
       { "label": "FAQ", "href": "/faq" },
-      { "label": "Contact", "href": "/contact" },
-      { "label": "Apply Now", "href": "/apply" }
+      { "label": "Contact", "href": "/contact" }
     ]
   },
   "home": {
     "hero": {
       "image": "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=1920&q=80",
-      "title": "Together, We Build Brighter Futures",
-      "subtitle": "Join us in making a meaningful difference in the lives of those who need it most.",
+      "title": "HELPING. HEALING. CARING.",
+      "subtitle": "There can be no keener revelation of a society’s soul",
       "primaryCTA": { "text": "Donate Now", "href": "/donate" },
       "secondaryCTA": { "text": "Learn More", "href": "/about" }
     },
     "mission": {
       "title": "Our Mission",
-      "content": "We believe every person deserves access to education, resources, and opportunities. Through our comprehensive programs, we empower individuals and families to overcome challenges and build sustainable, fulfilling lives."
+      "content": "New Purpose House is a nonprofit organization in Houston, TX, committed to transforming lives by providing safe housing, structure, and hope for women rebuilding after incarceration or substance abuse. We are more than a program — we are a community where women from all walks of life are given the tools, guidance, and support to heal, rediscover their purpose, and step confidently into a new chapter of independence and stability. The primary objective of New Purpose House is to offer a safe, nurturing, and holistic program that addresses the physical, emotional, and psychological aspects of personal growth and self-sufficiency. We aim to foster a community where women can support each other in their journey to personal development, ultimately helping them to find purpose and become productive members of society.We are a community where women from all walks of life are given the tools, guidance, and support to heal, rediscover their purpose, and step confidently into a new chapter of independence and stability. The primary objective of New Purpose House is to offer a safe, nurturing, and holistic program that addresses the physical, emotional, and psychological aspects of personal growth and self-sufficiency. We aim to foster a community where women can support each other in their journey to personal development, ultimately helping them to find purpose and become productive members of society."
     },
+
     "stats": [
       { "value": "10,000+", "label": "Lives Impacted" },
       { "value": "25", "label": "Community Programs" },
