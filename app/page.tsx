@@ -8,6 +8,8 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import content from "@/data/content.json"
 import { ArrowRightIcon } from "lucide-react"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+
 
 export default function HomePage() {
   const missionImageRef = useRef<HTMLDivElement>(null)
@@ -101,8 +103,8 @@ export default function HomePage() {
                 <div className="my-auto flex-1 text-left">
                   <h2 className="text-5xl font-bold mb-6 text-yellow-700 drop-shadow-lg">{content.home.mission.title}</h2>
                   <p className="text-lg text-black/90 leading-relaxed drop-shadow-md">{content.home.mission.content}</p>
-                  <Button asChild size="lg" variant="outline" className="bg-pink-300/20 hover:bg-pink-400/30 text-black backdrop-blur-sm border-pink-300/30 mt-16">
-                    <Link href={content.home.hero.secondaryCTA.href} className="flex py-6 px-64 items-center gap-2">
+                  <Button asChild className="bg-pink-300 hover:bg-pink-400 text-white mt-16">
+                    <Link href={content.home.hero.secondaryCTA.href} className="flex items-center gap-2">
                       {content.home.hero.secondaryCTA.text}
                       <ArrowRightIcon className="w-4 h-4" />
                     </Link>
@@ -116,7 +118,7 @@ export default function HomePage() {
                   <div className="relative w-full h-full overflow-hidden rounded-lg">
                       <Image 
                         src="/NewPurposeImageOne.jpg" 
-                        alt="Man with blurred figure behind him"
+                        alt="People in a group"
                       width={500}
                       height={500}
                       className="rounded-lg shadow-lg object-cover transition-transform duration-300 ease-out w-full h-full"
@@ -138,8 +140,9 @@ export default function HomePage() {
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
               {content.home.stats.map((stat, index) => (
                 <div key={index} className="text-center">
+                  {/* <FontAwesomeIcon icon={byPrefixAndName.fas[`${stat.icon}`]} /> */}
                   <div className="text-4xl font-bold mb-2">{stat.value}</div>
-                  <div className="text-emerald-100">{stat.label}</div>
+                  <div className="text-white">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -147,12 +150,35 @@ export default function HomePage() {
         </section>
 
 
-        {/* Testimonials Section */}
-        <section className="relative px-16 py-16 md:py-24 min-h-[60vh] flex items-center bg-white">
+        {/* Services Section */}
+        <section className="relative py-16 md:py-16 flex items-center bg-white">
           <div className="container">
             <div className="mx-auto max-w-3xl text-center">
-              <h2 className="text-3xl font-bold mb-6 text-black drop-shadow-lg">Testimonials</h2>
-              <p className="text-lg text-black/90 leading-relaxed drop-shadow-md">What our residents say about us</p>
+              <h2 className="text-5xl font-bold mb-6 text-yellow-700 drop-shadow-lg">Our Services</h2>
+              <p className="text-lg text-black/90 leading-relaxed drop-shadow-md">Our services are tailored for women aged 30 and above who are seeking a comprehensive recovery program. This includes women transitioning from inpatient treatment facilities, those with a history of relapse, and individuals in need of a structured sober living environment.</p>
+            </div>
+            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-2">
+              {content.programs.items.map((service, index) => (
+                <Card key={index} className=" flex flex-row text-center bg-pink-300">
+                  <div className="flex w-1/2">
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      width={50}
+                      height={50}
+                      className="rounded-lg shadow-lg object-cover transition-transform duration-300 ease-out w-full h-full"
+                    />
+                  </div>
+                  <div className="flex w-1/2">
+                    <CardHeader>
+                      <CardTitle>{service.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-white">{service.description}</p>
+                    </CardContent>
+                  </div>
+                </Card>
+              ))}
             </div>
           </div>
         </section>

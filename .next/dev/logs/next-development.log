@@ -1,47 +1,108 @@
-[00:00:01.611] Server  WARN     ⚠ Minimum recommended TypeScript version is v5.1.0, older versions can potentially be incompatible with Next.js. Detected: 5.0.2
-[00:00:01.954] Server  LOG      ✓ Ready in 1228ms
-[00:00:06.201] Server  LOG      ○ Compiling / ...
-[00:00:07.052] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:07.260] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:07.260] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:00:07.260] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764525911315}
-[00:03:21.657] Server  LOG      ✓ Compiled in 212ms
-[00:05:51.472] Server  LOG      ✓ Compiled in 244ms
-[00:05:55.098] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:05:55.507] Browser WARN    Image with src "/NewPurposeImageOne.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
-Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
-[00:05:55.507] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:05:55.507] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:05:55.507] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764526257544}
-[00:07:00.687] Server  LOG      ✓ Compiled in 177ms
-[00:07:10.561] Server  LOG      ✓ Compiled in 124ms
-[00:07:32.876] Server  LOG      ✓ Compiled in 106ms
-[00:07:58.984] Server  LOG      ✓ Compiled in 112ms
-[00:09:27.331] Server  LOG      ✓ Compiled in 216ms
-[00:09:57.243] Server  LOG      ✓ Compiled in 329ms
-[00:10:15.912] Server  LOG      ✓ Compiled in 175ms
-[00:11:42.272] Server  LOG      ✓ Compiled in 265ms
-[00:13:47.908] Server  LOG      ✓ Compiled in 197ms
-[00:15:37.705] Server  LOG      ✓ Compiled in 229ms
-[00:18:17.886] Server  LOG      ✓ Compiled in 293ms
-[00:18:50.943] Server  LOG      ✓ Compiled in 181ms
-[00:20:09.102] Server  LOG      ✓ Compiled in 361ms
-[00:20:45.493] Server  LOG      ✓ Compiled in 134ms
-[00:21:09.207] Server  LOG      ✓ Compiled in 137ms
-[00:21:23.845] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:21:24.287] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:21:24.287] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:21:24.287] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764527186301}
-[00:21:28.278] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:21:28.471] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:21:28.471] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:21:28.471] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764527190482}
-[00:25:12.885] Server  LOG      ✓ Compiled in 171ms
-[00:27:34.746] Server  LOG      ✓ Compiled in 311ms
-[00:28:08.552] Server  LOG      ✓ Compiled in 115ms
-[00:28:33.150] Server  LOG      ✓ Compiled in 168ms
-[00:28:44.893] Server  LOG      ✓ Compiled in 116ms
-[00:29:11.612] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:29:11.992] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:29:11.992] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:29:11.992] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764527653981}
+[00:00:02.102] Server  LOG      ✓ Ready in 1338ms
+[00:00:33.508] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:33.727] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:33.727] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:00:33.727] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764529873376}
+[00:01:09.086] Server  LOG      ✓ Compiled in 140ms
+[00:09:55.700] Server  LOG      ✓ Compiled in 187ms
+[00:09:58.027] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:09:58.536] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:09:58.537] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:09:58.537] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764530438183}
+[00:10:17.365] Server  LOG      ✓ Compiled in 266ms
+[00:11:22.285] Server  LOG      ✓ Compiled in 138ms
+[00:12:17.438] Server  LOG      ✓ Compiled in 105ms
+[00:14:21.753] Server  LOG      ✓ Compiled in 197ms
+[00:14:57.675] Server  LOG      ✓ Compiled in 166ms
+[00:15:14.403] Server  LOG      ✓ Compiled in 288ms
+[00:15:29.899] Server  LOG      ✓ Compiled in 188ms
+[00:16:01.850] Server  LOG      ✓ Compiled in 98ms
+[00:16:51.322] Server  LOG      ✓ Compiled in 113ms
+[00:17:10.404] Server  LOG      ✓ Compiled in 81ms
+[00:17:10.964] Browser ERROR   uncaughtError: TypeError: Cannot read properties of undefined (reading 'map')
+[00:18:47.397] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:18:47.505] Server  LOG      ✓ Compiled in 103ms
+[00:18:48.818] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764530967254}
+[00:18:50.075] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:18:50.897] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:18:50.897] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:18:50.897] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764530970518}
+[00:19:58.448] Server  LOG      ✓ Compiled in 115ms
+[00:27:11.349] Server  LOG      ✓ Compiled in 1157ms
+[00:27:13.867] Server  ERROR    ⨯ ReferenceError: s is not defined
+[00:27:15.373] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:27:15.639] Browser ERROR   uncaughtError: ReferenceError: s is not defined
+[00:28:11.503] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:28:11.503] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./app/page.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:28:11.596] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:28:11.612] Server  LOG      ✓ Compiled in 460ms
+[00:28:12.718] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:28:12.979] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:28:12.979] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:28:12.979] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764531891271}
+[00:28:50.503] Server  LOG      ✓ Compiled in 101ms
+[00:28:54.648] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:28:54.878] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:28:54.878] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:28:54.878] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764531933154}
+[00:29:00.796] Server  LOG      ✓ Compiled in 1116ms
+[00:30:14.013] Server  LOG      ✓ Compiled in 195ms
+[00:30:14.170] Browser ERROR   An empty string ("") was passed to the %s attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to %s instead of an empty string. src src
+[00:30:14.171] Browser ERROR   An empty string ("") was passed to the %s attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to %s instead of an empty string. src src
+[00:30:14.171] Browser ERROR   An empty string ("") was passed to the %s attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to %s instead of an empty string. src src
+[00:30:14.175] Browser ERROR   An empty string ("") was passed to the %s attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to %s instead of an empty string. src src
+[00:30:14.175] Browser ERROR   An empty string ("") was passed to the %s attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to %s instead of an empty string. src src
+[00:30:14.176] Browser ERROR   Image is missing required "src" property: <img>
+[00:30:14.176] Browser ERROR   Image is missing required "src" property: <img>
+[00:30:14.176] Browser ERROR   Image is missing required "src" property: <img>
+[00:30:14.176] Browser ERROR   Image is missing required "src" property: <img>
+[00:30:14.176] Browser ERROR   Image is missing required "src" property: <img>
+[00:30:14.176] Browser ERROR   Image is missing required "src" property: <img>
+[00:30:14.176] Browser ERROR   Image is missing required "src" property: <img>
+[00:30:14.176] Browser ERROR   Image is missing required "src" property: <img>
+[00:30:14.176] Browser ERROR   Image is missing required "src" property: <img>
+[00:30:14.176] Browser ERROR   Image is missing required "src" property: <img>
+[00:30:43.111] Server  LOG      ✓ Compiled in 137ms
+[00:32:29.700] Server  LOG      ✓ Compiled in 183ms
+[00:32:30.633] Browser ERROR   An empty string ("") was passed to the %s attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to %s instead of an empty string. src src
+[00:32:30.633] Browser ERROR   An empty string ("") was passed to the %s attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to %s instead of an empty string. src src
+[00:32:30.634] Browser ERROR   An empty string ("") was passed to the %s attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to %s instead of an empty string. src src
+[00:32:30.634] Browser ERROR   An empty string ("") was passed to the %s attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to %s instead of an empty string. src src
+[00:32:30.634] Browser ERROR   An empty string ("") was passed to the %s attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to %s instead of an empty string. src src
+[00:32:30.634] Browser ERROR   Image is missing required "src" property: <img>
+[00:32:30.634] Browser ERROR   Image is missing required "src" property: <img>
+[00:32:30.634] Browser ERROR   Image is missing required "src" property: <img>
+[00:32:30.634] Browser ERROR   Image is missing required "src" property: <img>
+[00:32:30.634] Browser ERROR   Image is missing required "src" property: <img>
+[00:32:30.634] Browser ERROR   Image is missing required "src" property: <img>
+[00:32:30.634] Browser ERROR   Image is missing required "src" property: <img>
+[00:32:30.634] Browser ERROR   Image is missing required "src" property: <img>
+[00:32:30.634] Browser ERROR   Image is missing required "src" property: <img>
+[00:32:30.634] Browser ERROR   Image is missing required "src" property: <img>
+[00:33:34.361] Server  LOG      ✓ Compiled in 179ms
+[00:34:16.824] Server  LOG      ✓ Compiled in 274ms
+[00:34:32.741] Server  LOG      ✓ Compiled in 124ms
+[00:34:44.060] Server  LOG      ✓ Compiled in 133ms
+[00:34:46.951] Server  ERROR   An empty string ("") was passed to the src attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to src instead of an empty string.
+[00:34:46.953] Server  ERROR   An empty string ("") was passed to the src attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to src instead of an empty string.
+[00:34:46.954] Server  ERROR   An empty string ("") was passed to the src attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to src instead of an empty string.
+[00:34:46.955] Server  ERROR   An empty string ("") was passed to the src attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to src instead of an empty string.
+[00:34:46.956] Server  ERROR   An empty string ("") was passed to the src attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to src instead of an empty string.
+[00:34:47.298] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:34:47.633] Browser ERROR   An empty string ("") was passed to the %s attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to %s instead of an empty string. src src
+[00:34:47.633] Browser ERROR   An empty string ("") was passed to the %s attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to %s instead of an empty string. src src
+[00:34:47.633] Browser ERROR   An empty string ("") was passed to the %s attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to %s instead of an empty string. src src
+[00:34:47.633] Browser ERROR   An empty string ("") was passed to the %s attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to %s instead of an empty string. src src
+[00:34:47.633] Browser ERROR   An empty string ("") was passed to the %s attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to %s instead of an empty string. src src
+[00:34:47.633] Browser ERROR   Image is missing required "src" property: <img>
+[00:34:47.633] Browser ERROR   Image is missing required "src" property: <img>
+[00:34:47.633] Browser ERROR   Image is missing required "src" property: <img>
+[00:34:47.633] Browser ERROR   Image is missing required "src" property: <img>
+[00:34:47.633] Browser ERROR   Image is missing required "src" property: <img>
+[00:34:47.633] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:34:47.633] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:34:47.633] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764532285914}
+[00:34:52.365] Server  LOG      ✓ Compiled in 80ms
+[00:35:18.337] Server  LOG      ✓ Compiled in 245ms
+[00:35:22.070] Server  LOG      ✓ Compiled in 81ms
+[00:35:34.170] Server  LOG      ✓ Compiled in 89ms
