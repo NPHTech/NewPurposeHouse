@@ -83,9 +83,9 @@ export default function HomePage() {
                     );
                   })}
                 </h1>
-                <p className="text-lg text-white/90 mb-8 text-balance drop-shadow-md">{content.home.hero.subtitle}</p>
+                <p className="font-bold text-lg text-white/90 mb-8 text-balance drop-shadow-md">{content.home.hero.subtitle}</p>
                 <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
-                  <Button asChild size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20">
+                  <Button asChild size="lg" variant="outline" className=" bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20">
                     <Link href={content.home.hero.secondaryCTA.href}>{content.home.hero.secondaryCTA.text}</Link>
                   </Button>
                 </div>
@@ -95,14 +95,14 @@ export default function HomePage() {
         </div>
 
           {/* Mission Section */}
-          <section className="relative px-16 py-16 md:py-24 min-h-[60vh] flex items-center mx-auto bg-white">
+          <section className=" py-16 px-8 relative min-h-[30vh] flex items-center mx-auto bg-white">
             <div className="container mx-auto">
               <div className="flex flex-col md:flex-row gap-16">
-                <div className="flex-1 text-left py-8">
-                  <h2 className="text-3xl font-bold mb-6 text-black drop-shadow-lg">{content.home.mission.title}</h2>
+                <div className="my-auto flex-1 text-left">
+                  <h2 className="text-5xl font-bold mb-6 text-yellow-700 drop-shadow-lg">{content.home.mission.title}</h2>
                   <p className="text-lg text-black/90 leading-relaxed drop-shadow-md">{content.home.mission.content}</p>
                   <Button asChild size="lg" variant="outline" className="bg-pink-300/20 hover:bg-pink-400/30 text-black backdrop-blur-sm border-pink-300/30 mt-16">
-                    <Link href={content.home.hero.secondaryCTA.href} className="flex items-center gap-2">
+                    <Link href={content.home.hero.secondaryCTA.href} className="flex py-6 px-64 items-center gap-2">
                       {content.home.hero.secondaryCTA.text}
                       <ArrowRightIcon className="w-4 h-4" />
                     </Link>
@@ -114,11 +114,11 @@ export default function HomePage() {
                   className="flex-1 w-full md:flex md:justify-center md:items-center overflow-hidden rounded-lg"  
                 >
                   <div className="relative w-full h-full overflow-hidden rounded-lg">
-                    <Image 
-                      src="https://unsplash.com/photos/IqQc7CXYJes/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fA%3D%3D&w=1920" 
-                      alt="Man with blurred figure behind him" 
+                      <Image 
+                        src="/NewPurposeImageOne.jpg" 
+                        alt="Man with blurred figure behind him"
                       width={500}
-                      height={700}
+                      height={500}
                       className="rounded-lg shadow-lg object-cover transition-transform duration-300 ease-out w-full h-full"
                       style={{ 
                         transform: `scale(${scale})`,
