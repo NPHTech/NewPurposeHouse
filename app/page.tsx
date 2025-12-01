@@ -220,6 +220,24 @@ export default function HomePage() {
           </div>
         </section>
 
+          {/* Testimonials Section */}
+          <section className=" py-16 px-8 relative min-h-[30vh] flex items-center mx-auto bg-[#f0efeb]">
+            <div className="container mx-auto">
+              <div className="flex flex-col md:flex-row gap-16">
+                <div className="my-auto flex-1 text-left">
+                  <h2 className="text-5xl font-bold mb-6 text-yellow-700 drop-shadow-lg">{content.home.mission.title}</h2>
+                  <p className="text-lg text-black/90 leading-relaxed drop-shadow-md">{content.home.mission.content}</p>
+                  <Button asChild className="bg-pink-300 hover:bg-pink-400 text-white mt-16">
+                    <Link href={content.home.hero.secondaryCTA.href} className="flex items-center gap-2">
+                      {content.home.hero.secondaryCTA.text}
+                      <ArrowRightIcon className="w-4 h-4" />
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </section>
+
         {/* Call to Action Section */}
         <section className="py-16 md:py-24">
           <div className="container">
