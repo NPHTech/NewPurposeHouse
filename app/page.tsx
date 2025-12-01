@@ -190,7 +190,7 @@ export default function HomePage() {
               {content.programs.items.map((service, index) => (
                 <Card 
                   key={index} 
-                  className={`flex flex-row text-center shadow-lg transition-all duration-1500 ease-out ${
+                  className={`flex flex-col md:flex-row text-center shadow-lg transition-all duration-1500 ease-out ${
                     cardsVisible 
                       ? 'opacity-100 translate-y-0' 
                       : 'opacity-0 translate-y-20'
@@ -199,16 +199,16 @@ export default function HomePage() {
                     transitionDelay: `${index * 250}ms` // Stagger animation for each card
                   }}
                 >
-                  <div className="flex w-1/2 overflow-hidden">
+                  <div className="flex w-full md:w-1/2 overflow-hidden">
                     <Image
                       src={service.image}
                       alt={service.title}
                       width={50}
                       height={50}
-                      className="rounded-lg shadow-lg object-cover transition-transform duration-300 ease-out w-full h-full hover:scale-110"
+                      className="rounded-t-lg md:rounded-l-lg md:rounded-r-none shadow-lg object-cover transition-transform duration-300 ease-out w-full h-full hover:scale-110"
                     />
                   </div>
-                  <div className="flex w-1/2 flex-col justify-center items-center text-amber-950 py-8">
+                  <div className="flex w-full md:w-1/2 flex-col justify-center items-center text-amber-950 py-8">
                     <CardTitle>{service.title}</CardTitle>
                     <CardContent>
                       <p>{service.description}</p>
