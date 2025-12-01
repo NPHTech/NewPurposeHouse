@@ -73,27 +73,32 @@
       {
         "title": "Adult Job Training",
         "description": "Skills training, resume building, interview preparation, and job placement assistance for adults seeking employment or career advancement. Includes certifications in various trades and professional development workshops.",
-        "cta": { "text": "Learn More", "href": "/programs#job-training" }
+        "cta": { "text": "Learn More", "href": "/programs#job-training" },
+        "image": "/images/programs/job-training.jpg"
       },
       {
         "title": "Family Support Services",
         "description": "Comprehensive support including food assistance, housing resources, childcare referrals, and family counseling. We help families navigate challenging times and connect them with essential community resources.",
-        "cta": { "text": "Learn More", "href": "/programs#family" }
+        "cta": { "text": "Learn More", "href": "/programs#family" },
+        "image": "/images/programs/job-training.jpg"
       },
       {
         "title": "Mental Health & Wellness",
         "description": "Free and low-cost counseling services, support groups, and wellness workshops. Our licensed therapists and counselors provide confidential support for individuals and families dealing with stress, trauma, and mental health challenges.",
-        "cta": { "text": "Learn More", "href": "/programs#mental-health" }
+        "cta": { "text": "Learn More", "href": "/programs#mental-health" },
+        "image": "/images/programs/job-training.jpg"
       },
       {
         "title": "Senior Companion Program",
         "description": "Social connection, wellness checks, and assistance with daily tasks for isolated seniors. Our trained volunteers provide companionship, help with errands, and ensure seniors remain safe and engaged in the community.",
-        "cta": { "text": "Learn More", "href": "/programs#seniors" }
+        "cta": { "text": "Learn More", "href": "/programs#seniors" },
+        "image": "/images/programs/job-training.jpg"
       },
       {
         "title": "Emergency Assistance",
         "description": "Rapid response support for families facing immediate crises, including utility assistance, emergency food, temporary housing, and crisis counseling. Available 24/7 for urgent needs.",
-        "cta": { "text": "Learn More", "href": "/programs#emergency" }
+        "cta": { "text": "Learn More", "href": "/programs#emergency" },
+        "image": "/images/programs/job-training.jpg"
       }
     ]
   },

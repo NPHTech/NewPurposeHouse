@@ -13,8 +13,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 export default function HomePage() {
   const missionImageRef = useRef<HTMLDivElement>(null)
+  const servicesSectionRef = useRef<HTMLDivElement>(null)
   const [scale, setScale] = useState(1.0)
   const [heroTitleVisible, setHeroTitleVisible] = useState(false)
+  const [cardsVisible, setCardsVisible] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -54,6 +56,33 @@ export default function HomePage() {
       setHeroTitleVisible(true)
     }, 100)
     return () => clearTimeout(timer)
+  }, [])
+
+  useEffect(() => {
+    // Intersection Observer for services section cards animation
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setCardsVisible(true)
+          }
+        })
+      },
+      {
+        threshold: 0.05, // Trigger when 5% of the section is visible
+        rootMargin: '0px 0px -200px 0px' // Trigger earlier, 200px before section enters viewport
+      }
+    )
+
+    if (servicesSectionRef.current) {
+      observer.observe(servicesSectionRef.current)
+    }
+
+    return () => {
+      if (servicesSectionRef.current) {
+        observer.unobserve(servicesSectionRef.current)
+      }
+    }
   }, [])
 
   return (
@@ -97,7 +126,7 @@ export default function HomePage() {
         </div>
 
           {/* Mission Section */}
-          <section className=" py-16 px-8 relative min-h-[30vh] flex items-center mx-auto bg-white">
+          <section className=" py-16 px-8 relative min-h-[30vh] flex items-center mx-auto bg-[#f0efeb]">
             <div className="container mx-auto">
               <div className="flex flex-col md:flex-row gap-16">
                 <div className="my-auto flex-1 text-left">
@@ -151,15 +180,25 @@ export default function HomePage() {
 
 
         {/* Services Section */}
-        <section className="relative py-16 md:py-16 flex items-center bg-white">
+        <section ref={servicesSectionRef} className="relative py-16 px-8 md:py-16 flex items-center bg-white">
           <div className="container">
-            <div className="mx-auto max-w-3xl text-center">
+            <div className=" py-16 mx-auto max-w-3xl text-center">
               <h2 className="text-5xl font-bold mb-6 text-yellow-700 drop-shadow-lg">Our Services</h2>
               <p className="text-lg text-black/90 leading-relaxed drop-shadow-md">Our services are tailored for women aged 30 and above who are seeking a comprehensive recovery program. This includes women transitioning from inpatient treatment facilities, those with a history of relapse, and individuals in need of a structured sober living environment.</p>
             </div>
-            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-2">
+            <div className="grid gap-8 sm:grid-cols-1 lg:grid-cols-2">
               {content.programs.items.map((service, index) => (
-                <Card key={index} className=" flex flex-row text-center bg-pink-300">
+                <Card 
+                  key={index} 
+                  className={`flex flex-row text-center bg-pink-300 transition-all duration-1500 ease-out ${
+                    cardsVisible 
+                      ? 'opacity-100 translate-y-0' 
+                      : 'opacity-0 translate-y-20'
+                  }`}
+                  style={{
+                    transitionDelay: `${index * 250}ms` // Stagger animation for each card
+                  }}
+                >
                   <div className="flex w-1/2">
                     <Image
                       src={service.image}
@@ -169,10 +208,8 @@ export default function HomePage() {
                       className="rounded-lg shadow-lg object-cover transition-transform duration-300 ease-out w-full h-full"
                     />
                   </div>
-                  <div className="flex w-1/2">
-                    <CardHeader>
-                      <CardTitle>{service.title}</CardTitle>
-                    </CardHeader>
+                  <div className="flex w-1/2 flex-col justify-center items-center py-8">
+                    <CardTitle>{service.title}</CardTitle>
                     <CardContent>
                       <p className="text-white">{service.description}</p>
                     </CardContent>
