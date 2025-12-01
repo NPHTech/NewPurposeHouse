@@ -126,7 +126,7 @@ export default function HomePage() {
         </div>
 
           {/* Mission Section */}
-          <section className=" py-16 px-8 relative min-h-[30vh] flex items-center mx-auto bg-[#f0efeb]">
+          <section className="py-16 px-4 sm:px-8 lg:px-16 relative min-h-[30vh] flex items-center mx-auto bg-[#f0efeb]">
             <div className="container mx-auto">
               <div className="flex flex-col md:flex-row gap-16">
                 <div className="my-auto flex-1 text-left">
@@ -164,8 +164,8 @@ export default function HomePage() {
           </section>
 
         {/* Stats Section */}
-        <section className="py-16 bg-primary text-white">
-          <div className="container">
+        <section className="py-16 px-4 sm:px-8 lg:px-16 bg-primary text-white">
+          <div className="container mx-auto">
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
               {content.home.stats.map((stat, index) => (
                 <div key={index} className="text-center">
@@ -180,8 +180,8 @@ export default function HomePage() {
 
 
         {/* Services Section */}
-        <section ref={servicesSectionRef} className="relative py-16 px-8 md:py-16 flex items-center bg-white">
-          <div className="container">
+        <section ref={servicesSectionRef} className="py-16 px-4 sm:px-8 lg:px-16 md:py-16 flex items-center bg-white">
+          <div className="container mx-auto">
             <div className=" py-16 mx-auto max-w-3xl text-center">
               <h2 className="text-4xl font-bold mb-6 text-yellow-700 drop-shadow-lg">Our Services</h2>
               <p className="text-lg text-black/90 leading-relaxed drop-shadow-md">Our services are tailored for women aged 30 and above who are seeking a comprehensive recovery program. This includes women transitioning from inpatient treatment facilities, those with a history of relapse, and individuals in need of a structured sober living environment.</p>
@@ -227,9 +227,9 @@ export default function HomePage() {
           </div>
         </section>
 
-          {/* Testimonials Section */}
-          <section className=" py-16 px-8 relative min-h-[30vh] flex items-center mx-auto bg-[#f0efeb]">
-            <div className="container mx-auto">
+           {/* Testimonials Section */}
+           <section className="py-16 px-4 sm:px-8 lg:px-16 relative min-h-[30vh] flex items-center mx-auto bg-[#f0efeb]">
+             <div className="container mx-auto">
               <div className="flex flex-col md:flex-row gap-16">
                 <div className="my-auto flex-1 text-left">
                   <h2 className="text-4xl font-bold mb-6 text-yellow-700 drop-shadow-lg">{content.home.testimonials.title}</h2>
@@ -246,8 +246,8 @@ export default function HomePage() {
           </section>
 
         {/* Call to Action Section */}
-        <section className="py-16 md:py-24">
-          <div className="container">
+        <section className="py-16 px-4 sm:px-8 lg:px-16 md:py-24">
+          <div className="container mx-auto">
             <div className="mx-auto max-w-3xl text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">{content.home.callToAction.title}</h2>
               <p className="text-lg text-muted-foreground">{content.home.callToAction.content}</p>
