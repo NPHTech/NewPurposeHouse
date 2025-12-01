@@ -4,6 +4,7 @@ import { useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import content from "@/data/content.json"
+import Image from "next/image"
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -13,7 +14,7 @@ export function Header() {
       <div className="container mx-auto flex h-16 items-center justify-between">
         {/* Logo / Site Name */}
         <Link href="/" className="flex items-center gap-2">
-          <span className="text-xl font-semibold">{content.site.name}</span>
+          <Image src={content.site.logo} alt={content.site.name} width={100} height={100} />
         </Link>
 
         {/* Desktop nav */}

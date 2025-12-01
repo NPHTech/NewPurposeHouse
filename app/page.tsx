@@ -190,7 +190,7 @@ export default function HomePage() {
               {content.programs.items.map((service, index) => (
                 <Card 
                   key={index} 
-                  className={`flex flex-row text-center bg-pink-300 transition-all duration-1500 ease-out ${
+                  className={`flex flex-row text-center shadow-lg transition-all duration-1500 ease-out ${
                     cardsVisible 
                       ? 'opacity-100 translate-y-0' 
                       : 'opacity-0 translate-y-20'
@@ -199,23 +199,30 @@ export default function HomePage() {
                     transitionDelay: `${index * 250}ms` // Stagger animation for each card
                   }}
                 >
-                  <div className="flex w-1/2">
+                  <div className="flex w-1/2 overflow-hidden">
                     <Image
                       src={service.image}
                       alt={service.title}
                       width={50}
                       height={50}
-                      className="rounded-lg shadow-lg object-cover transition-transform duration-300 ease-out w-full h-full"
+                      className="rounded-lg shadow-lg object-cover transition-transform duration-300 ease-out w-full h-full hover:scale-110"
                     />
                   </div>
-                  <div className="flex w-1/2 flex-col justify-center items-center py-8">
+                  <div className="flex w-1/2 flex-col justify-center items-center text-amber-950 py-8">
                     <CardTitle>{service.title}</CardTitle>
                     <CardContent>
-                      <p className="text-white">{service.description}</p>
+                      <p>{service.description}</p>
                     </CardContent>
                   </div>
                 </Card>
               ))}
+            </div>
+            <div className="mt-12 flex justify-center">
+                <div className="flex flex-col items-center justify-center">
+                  <Button asChild variant="outline" className="bg-pink-300 hover:bg-pink-400 text-white mt-16 px-8 py-6">
+                    <Link href="/programs">View All Programs</Link>
+                  </Button>
+                </div>
             </div>
           </div>
         </section>
@@ -225,11 +232,11 @@ export default function HomePage() {
             <div className="container mx-auto">
               <div className="flex flex-col md:flex-row gap-16">
                 <div className="my-auto flex-1 text-left">
-                  <h2 className="text-5xl font-bold mb-6 text-yellow-700 drop-shadow-lg">{content.home.mission.title}</h2>
-                  <p className="text-lg text-black/90 leading-relaxed drop-shadow-md">{content.home.mission.content}</p>
+                  <h2 className="text-5xl font-bold mb-6 text-yellow-700 drop-shadow-lg">{content.home.testimonials.title}</h2>
+                  <p className="text-lg text-black/90 leading-relaxed drop-shadow-md">{content.home.testimonials.content}</p>
                   <Button asChild className="bg-pink-300 hover:bg-pink-400 text-white mt-16">
-                    <Link href={content.home.hero.secondaryCTA.href} className="flex items-center gap-2">
-                      {content.home.hero.secondaryCTA.text}
+                    <Link href={content.home.testimonials.secondaryCTA.href} className="flex items-center gap-2">
+                      {content.home.testimonials.secondaryCTA.text}
                       <ArrowRightIcon className="w-4 h-4" />
                     </Link>
                   </Button>

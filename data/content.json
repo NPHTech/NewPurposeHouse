@@ -1,6 +1,7 @@
 {
   "site": {
     "name": "New Purpose House",
+    "logo": "/images/home/NPHLogo.png",
     "tagline": "Empowering Communities, Transforming Lives",
     "description": "A nonprofit dedicated to creating lasting change through education, support, and community programs."
   },
@@ -33,6 +34,13 @@
       { "icon": "money-bill-wheat", "value": "7+", "label": "Programs and Services Offered" },
       { "icon": "people-group", "value": "50+", "label": "Network of volunteers" }
     ],
+    "testimonials": {
+      "image": "/NewPurposeHomeBanner.jpg",
+      "title": "Testimonials",
+      "content": "New Purpose Recovery House stands out due to its holistic approach to recovery, combining evidence-based practices with personalized care. Our focus on empowering women through education, life skills training, and community support ensures a comprehensive and sustainable recovery process that helps women find their purpose and re-enter society as productive individuals.",
+      "primaryCTA": { "text": "Donate Now", "href": "/donate" },
+      "secondaryCTA": { "text": "Learn More", "href": "/about" }
+    },
     "callToAction": {
       "title": "Ready to Make a Difference?",
       "content": "Whether you want to volunteer, donate, or apply for our programs, we're here to help you get started.",
