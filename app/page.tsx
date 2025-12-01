@@ -100,7 +100,7 @@ export default function HomePage() {
             <div className="container mx-auto relative z-10">
               <div className="mx-auto max-w-3xl text-center">
                 <h1 
-                  className={`text-4xl font-bold tracking-tight text-balance sm:text-6xl mb-6 drop-shadow-lg transition-opacity duration-1000 ease-in ${
+                  className={`text-5xl sm:text-4xl font-bold tracking-tight text-balance sm:text-6xl mb-6 drop-shadow-lg transition-opacity duration-1000 ease-in ${
                     heroTitleVisible ? 'opacity-100' : 'opacity-0'
                   }`}
                 >
@@ -130,7 +130,7 @@ export default function HomePage() {
             <div className="container mx-auto">
               <div className="flex flex-col md:flex-row gap-16">
                 <div className="my-auto flex-1 text-left">
-                  <h2 className="text-5xl font-bold mb-6 text-yellow-700 drop-shadow-lg">{content.home.mission.title}</h2>
+                  <h2 className="text-4xl font-bold mb-6 text-yellow-700 drop-shadow-lg">{content.home.mission.title}</h2>
                   <p className="text-lg text-black/90 leading-relaxed drop-shadow-md">{content.home.mission.content}</p>
                   <Button asChild className="bg-pink-300 hover:bg-pink-400 text-white mt-16">
                     <Link href={content.home.hero.secondaryCTA.href} className="flex items-center gap-2">
@@ -183,7 +183,7 @@ export default function HomePage() {
         <section ref={servicesSectionRef} className="relative py-16 px-8 md:py-16 flex items-center bg-white">
           <div className="container">
             <div className=" py-16 mx-auto max-w-3xl text-center">
-              <h2 className="text-5xl font-bold mb-6 text-yellow-700 drop-shadow-lg">Our Services</h2>
+              <h2 className="text-4xl font-bold mb-6 text-yellow-700 drop-shadow-lg">Our Services</h2>
               <p className="text-lg text-black/90 leading-relaxed drop-shadow-md">Our services are tailored for women aged 30 and above who are seeking a comprehensive recovery program. This includes women transitioning from inpatient treatment facilities, those with a history of relapse, and individuals in need of a structured sober living environment.</p>
             </div>
             <div className="grid gap-8 sm:grid-cols-1 lg:grid-cols-2">
@@ -232,7 +232,7 @@ export default function HomePage() {
             <div className="container mx-auto">
               <div className="flex flex-col md:flex-row gap-16">
                 <div className="my-auto flex-1 text-left">
-                  <h2 className="text-5xl font-bold mb-6 text-yellow-700 drop-shadow-lg">{content.home.testimonials.title}</h2>
+                  <h2 className="text-4xl font-bold mb-6 text-yellow-700 drop-shadow-lg">{content.home.testimonials.title}</h2>
                   <p className="text-lg text-black/90 leading-relaxed drop-shadow-md">{content.home.testimonials.content}</p>
                   <Button asChild className="bg-pink-300 hover:bg-pink-400 text-white mt-16">
                     <Link href={content.home.testimonials.secondaryCTA.href} className="flex items-center gap-2">
