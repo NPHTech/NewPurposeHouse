@@ -38,8 +38,27 @@
       "image": "/NewPurposeHomeBanner.jpg",
       "title": "Testimonials",
       "content": "New Purpose Recovery House stands out due to its holistic approach to recovery, combining evidence-based practices with personalized care. Our focus on empowering women through education, life skills training, and community support ensures a comprehensive and sustainable recovery process that helps women find their purpose and re-enter society as productive individuals.",
-      "primaryCTA": { "text": "Donate Now", "href": "/donate" },
-      "secondaryCTA": { "text": "Learn More", "href": "/about" }
+      "primaryCTA": { "text": "See more", "href": "/about" },
+      "items": [
+        { 
+          "title": "Testimonial 1",
+          "thumbnail": "/NewPurposeHomeBanner.jpg", 
+          "content": "This is yada yada and she really loves the organization", 
+          "video": "/NewPurposeHomeBanner.jpg"
+        },
+        { 
+          "title": "Testimonial 2",
+          "thumbnail": "/NewPurposeHomeBanner.jpg", 
+          "content": "This is yada yada and she really loves the organization", 
+          "video": "/NewPurposeHomeBanner.jpg"
+        },
+        { 
+          "title": "Testimonial 3",
+          "thumbnail": "/NewPurposeHomeBanner.jpg", 
+          "content": "This is yada yada and she really loves the organization", 
+          "video": "/NewPurposeHomeBanner.jpg"
+        } 
+      ]
     },
     "callToAction": {
       "title": "Ready to Make a Difference?",
@@ -79,35 +98,42 @@
     "intro": "We offer a wide range of programs designed to address the diverse needs of our community members. Each program is carefully crafted with input from those we serve.",
     "items": [
       {
-        "title": "Adult Job Training",
-        "description": "Skills training, resume building, interview preparation, and job placement assistance for adults seeking employment or career advancement. Includes certifications in various trades and professional development workshops.",
+        "title": "Residential Recovery Program",
+        "description": "A structured living environment with 24/7 support to ensure stability and safety.",
         "cta": { "text": "Learn More", "href": "/programs#job-training" },
         "image": "/images/programs/job-training.jpg"
       },
       {
-        "title": "Family Support Services",
-        "description": "Comprehensive support including food assistance, housing resources, childcare referrals, and family counseling. We help families navigate challenging times and connect them with essential community resources.",
+        "title": "Counseling and Therapy",
+        "description": "Individual and group therapy sessions led by licensed professionals to address underlying challenges and develop effective coping strategies.",
         "cta": { "text": "Learn More", "href": "/programs#family" },
         "image": "/images/programs/job-training.jpg"
       },
       {
-        "title": "Mental Health & Wellness",
-        "description": "Free and low-cost counseling services, support groups, and wellness workshops. Our licensed therapists and counselors provide confidential support for individuals and families dealing with stress, trauma, and mental health challenges.",
+        "title": "Life Skills Training",
+        "description": "Workshops and classes focusing on skills such as financial management, job readiness, and personal development to help women become self-sufficient.",
         "cta": { "text": "Learn More", "href": "/programs#mental-health" },
         "image": "/images/programs/job-training.jpg"
       },
       {
-        "title": "Senior Companion Program",
-        "description": "Social connection, wellness checks, and assistance with daily tasks for isolated seniors. Our trained volunteers provide companionship, help with errands, and ensure seniors remain safe and engaged in the community.",
+        "title": "Health and Wellness Programs",
+        "description": "Activities and resources to promote physical health, including fitness classes, nutritional guidance, and mindfulness practices.",
         "cta": { "text": "Learn More", "href": "/programs#seniors" },
         "image": "/images/programs/job-training.jpg"
       },
       {
-        "title": "Emergency Assistance",
-        "description": "Rapid response support for families facing immediate crises, including utility assistance, emergency food, temporary housing, and crisis counseling. Available 24/7 for urgent needs.",
+        "title": "Parenting Classes",
+        "description": "Dedicated courses to support mothers in building parenting skills and fostering positive family relationships.",
+        "cta": { "text": "Learn More", "href": "/programs#emergency" },
+        "image": "/images/programs/job-training.jpg"
+      },
+      {
+        "title": "Training to Work Initiative",
+        "description": "A program aimed at equipping women with the skills and resources needed for workforce reintegration. This includes job training, resume-building workshops, interview preparation, and partnerships with local employers for job placements.",
         "cta": { "text": "Learn More", "href": "/programs#emergency" },
         "image": "/images/programs/job-training.jpg"
       }
+
     ]
   },
   "services": {

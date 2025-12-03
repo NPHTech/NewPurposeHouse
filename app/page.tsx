@@ -8,7 +8,8 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import content from "@/data/content.json"
 import { ArrowRightIcon } from "lucide-react"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import TestimonialCard from "@/components/ui/testimonialCard"
+import ServicesCard from "@/components/ui/servicesCard"
 
 
 export default function HomePage() {
@@ -186,35 +187,9 @@ export default function HomePage() {
               <h2 className="text-4xl font-bold mb-6 text-yellow-700 drop-shadow-lg">Our Services</h2>
               <p className="text-lg text-black/90 leading-relaxed drop-shadow-md">Our services are tailored for women aged 30 and above who are seeking a comprehensive recovery program. This includes women transitioning from inpatient treatment facilities, those with a history of relapse, and individuals in need of a structured sober living environment.</p>
             </div>
-            <div className="grid gap-8 sm:grid-cols-1 lg:grid-cols-2">
+            <div className="grid gap-8 sm:grid-cols-1 lg:grid-cols-3">
               {content.programs.items.map((service, index) => (
-                <Card 
-                  key={index} 
-                  className={`flex flex-col md:flex-row text-center shadow-lg transition-all duration-1500 ease-out ${
-                    cardsVisible 
-                      ? 'opacity-100 translate-y-0' 
-                      : 'opacity-0 translate-y-20'
-                  }`}
-                  style={{
-                    transitionDelay: `${index * 250}ms` // Stagger animation for each card
-                  }}
-                >
-                  <div className="flex w-full md:w-1/2 overflow-hidden">
-                    <Image
-                      src={service.image}
-                      alt={service.title}
-                      width={50}
-                      height={50}
-                      className="rounded-t-lg md:rounded-l-lg md:rounded-r-none shadow-lg object-cover transition-transform duration-300 ease-out w-full h-full hover:scale-110"
-                    />
-                  </div>
-                  <div className="flex w-full md:w-1/2 flex-col justify-center items-center text-amber-950 py-8">
-                    <CardTitle>{service.title}</CardTitle>
-                    <CardContent>
-                      <p>{service.description}</p>
-                    </CardContent>
-                  </div>
-                </Card>
+                <ServicesCard key={index} service={service} index={index} cardsVisible={cardsVisible} />
               ))}
             </div>
             <div className="mt-12 flex justify-center">
@@ -227,24 +202,33 @@ export default function HomePage() {
           </div>
         </section>
 
-           {/* Testimonials Section */}
-           <section className="py-16 px-4 sm:px-8 lg:px-16 relative min-h-[30vh] flex items-center mx-auto bg-[#f0efeb]">
+        {/* Testimonials Section */}
+        <section className="py-16 px-4 sm:px-8 lg:px-16 relative min-h-[30vh] flex items-center mx-auto bg-[#f0efeb]">
              <div className="container mx-auto">
               <div className="flex flex-col md:flex-row gap-16">
                 <div className="my-auto flex-1 text-left">
                   <h2 className="text-4xl font-bold mb-6 text-yellow-700 drop-shadow-lg">{content.home.testimonials.title}</h2>
                   <p className="text-lg text-black/90 leading-relaxed drop-shadow-md">{content.home.testimonials.content}</p>
+
+                <div className="mt-12 grid gap-8 sm:grid-cols-1 lg:grid-cols-2">
+                  {
+                  content.home.testimonials.items.slice(0, 2).map((testimonial, index) => (
+                    <TestimonialCard key={index} testimonial={testimonial} index={index} cardsVisible={cardsVisible} />
+                  ))}
+                </div>
+                  
                   <Button asChild className="bg-pink-300 hover:bg-pink-400 text-white mt-16">
-                    <Link href={content.home.testimonials.secondaryCTA.href} className="flex items-center gap-2">
-                      {content.home.testimonials.secondaryCTA.text}
+                    <Link href={content.home.testimonials.primaryCTA.href} className="flex items-center gap-2">
+                      {content.home.testimonials.primaryCTA.text}
                       <ArrowRightIcon className="w-4 h-4" />
                     </Link>
                   </Button>
                 </div>
               </div>
             </div>
-          </section>
+        </section>
 
+       
         {/* Call to Action Section */}
         <section className="py-16 px-4 sm:px-8 lg:px-16 md:py-24">
           <div className="container mx-auto">
