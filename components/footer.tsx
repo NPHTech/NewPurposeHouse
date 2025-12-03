@@ -3,7 +3,7 @@ import content from "@/data/content.json"
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-muted/30">
+    <footer className="border-t border-border bg-muted/30 px-16">
       <div className="container py-12">
         <div className="grid gap-8 md:grid-cols-3">
           <div>

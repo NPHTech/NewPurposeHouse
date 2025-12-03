@@ -42,13 +42,13 @@
       "items": [
         { 
           "title": "Testimonial 1",
-          "thumbnail": "/NewPurposeHomeBanner.jpg", 
+          "thumbnail": "/images/home/testimonial_one.png", 
           "content": "This is yada yada and she really loves the organization", 
           "video": "/NewPurposeHomeBanner.jpg"
         },
         { 
           "title": "Testimonial 2",
-          "thumbnail": "/NewPurposeHomeBanner.jpg", 
+          "thumbnail": "/images/home/testimonial_two.png", 
           "content": "This is yada yada and she really loves the organization", 
           "video": "/NewPurposeHomeBanner.jpg"
         },
@@ -64,9 +64,9 @@
       "title": "Ready to Make a Difference?",
       "content": "Whether you want to volunteer, donate, or apply for our programs, we're here to help you get started.",
       "buttons": [
-        { "text": "View Programs", "href": "/programs" },
-        { "text": "Apply Now", "href": "/apply" },
-        { "text": "Donate", "href": "/donate" }
+        { "text": "See our value proposition", "href": "/programs" },
+        { "text": "Apply to join us", "href": "/apply" },
+        { "text": "Donate to support our mission", "href": "/donate" }
       ]
     }
   },

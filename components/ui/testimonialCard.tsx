@@ -9,7 +9,7 @@ const TestimonialCard = ({ testimonial, index, cardsVisible }: { testimonial: an
   return (
     <Card 
         key={index} 
-        className={`flex flex-col md:flex-row shadow-lg transition-all duration-1500 ease-out ${
+        className={`relative bg-white flex flex-col md:flex-row shadow-lg transition-all duration-1500 ease-out overflow-hidden group ${
         cardsVisible 
             ? 'opacity-100 translate-y-0' 
             : 'opacity-0 translate-y-20'
@@ -18,7 +18,9 @@ const TestimonialCard = ({ testimonial, index, cardsVisible }: { testimonial: an
         transitionDelay: `${index * 250}ms` // Stagger animation for each card
         }}
   >
-    <div className="flex w-full md:w-1/2 overflow-hidden">
+    {/* Hover Overlay */}
+    <div className="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out z-10 pointer-events-none"></div>
+    <div className="relative z-0 flex w-full md:w-1/2 overflow-hidden">
       <Image
         src={testimonial.thumbnail}
         alt={testimonial.title}
@@ -28,7 +30,7 @@ const TestimonialCard = ({ testimonial, index, cardsVisible }: { testimonial: an
       />
     </div>
 
-    <div className="flex w-full md:w-1/2 flex-col justify-center text-amber-950 py-8">
+    <div className="relative z-0 flex w-full md:w-1/2 flex-col justify-center text-amber-950 py-8">
       <CardTitle>{testimonial.title}</CardTitle>
       <CardContent>
         <p>{testimonial.content}</p>

@@ -217,23 +217,21 @@ export default function HomePage() {
                   ))}
                 </div>
                   
-                  <Button asChild className="bg-pink-300 hover:bg-pink-400 text-white mt-16">
-                    <Link href={content.home.testimonials.primaryCTA.href} className="flex items-center gap-2">
-                      {content.home.testimonials.primaryCTA.text}
-                      <ArrowRightIcon className="w-4 h-4" />
-                    </Link>
+                <div className="flex flex-col items-center justify-center">
+                  <Button asChild variant="outline" className="bg-pink-300 hover:bg-pink-400 text-white mt-16 px-8 py-6">
+                    <Link href="/programs">Learn more</Link>
                   </Button>
+                </div>
                 </div>
               </div>
             </div>
         </section>
 
-       
         {/* Call to Action Section */}
-        <section className="py-16 px-4 sm:px-8 lg:px-16 md:py-24">
+        <section className="py-16 px-4 sm:px-8 lg:px-16 md:py-24 bg-white">
           <div className="container mx-auto">
             <div className="mx-auto max-w-3xl text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">{content.home.callToAction.title}</h2>
+              <h2 className="text-3xl font-bold mb-4 text-yellow-700 drop-shadow-lg">{content.home.callToAction.title}</h2>
               <p className="text-lg text-muted-foreground">{content.home.callToAction.content}</p>
             </div>
             <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
