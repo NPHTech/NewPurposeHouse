@@ -93,7 +93,7 @@
     ]
   },
   "programs": {
-    "title": "Our Programs",
+    "title": "Offered Services",
     "subtitle": "Comprehensive Support for Every Stage of Life",
     "intro": "We offer a wide range of programs designed to address the diverse needs of our community members. Each program is carefully crafted with input from those we serve.",
     "items": [
@@ -101,86 +101,45 @@
         "title": "Residential Recovery Program",
         "description": "A structured living environment with 24/7 support to ensure stability and safety.",
         "cta": { "text": "Learn More", "href": "/programs#job-training" },
-        "image": "/images/programs/job-training.jpg"
+        "image": "/icons/services/house-1.png"
       },
       {
         "title": "Counseling and Therapy",
         "description": "Individual and group therapy sessions led by licensed professionals to address underlying challenges and develop effective coping strategies.",
         "cta": { "text": "Learn More", "href": "/programs#family" },
-        "image": "/images/programs/job-training.jpg"
+        "image": "/icons/services/discussion.png"
       },
       {
         "title": "Life Skills Training",
         "description": "Workshops and classes focusing on skills such as financial management, job readiness, and personal development to help women become self-sufficient.",
         "cta": { "text": "Learn More", "href": "/programs#mental-health" },
-        "image": "/images/programs/job-training.jpg"
+        "image": "/icons/services/conference-1.png"
+      },
+      {
+        "title": "Peer Support Groups",
+        "description": "Activities and resources to promote physical health, including fitness classes, nutritional guidance, and mindfulness practices.",
+        "cta": { "text": "Learn More", "href": "/programs#seniors" },
+        "image": "/icons/services/health-care.png"
       },
       {
         "title": "Health and Wellness Programs",
-        "description": "Activities and resources to promote physical health, including fitness classes, nutritional guidance, and mindfulness practices.",
-        "cta": { "text": "Learn More", "href": "/programs#seniors" },
-        "image": "/images/programs/job-training.jpg"
+        "description": "Dedicated courses to support mothers in building parenting skills and fostering positive family relationships.",
+        "cta": { "text": "Learn More", "href": "/programs#emergency" },
+        "image": "/icons/services/wellbeing.png"
       },
       {
         "title": "Parenting Classes",
-        "description": "Dedicated courses to support mothers in building parenting skills and fostering positive family relationships.",
-        "cta": { "text": "Learn More", "href": "/programs#emergency" },
-        "image": "/images/programs/job-training.jpg"
-      },
-      {
-        "title": "Training to Work Initiative",
         "description": "A program aimed at equipping women with the skills and resources needed for workforce reintegration. This includes job training, resume-building workshops, interview preparation, and partnerships with local employers for job placements.",
         "cta": { "text": "Learn More", "href": "/programs#emergency" },
-        "image": "/images/programs/job-training.jpg"
+        "image": "/icons/services/care.png"
+      },
+      {
+        "title": "Training to Work Initiatives",
+        "description": "A program aimed at equipping women with the skills and resources needed for workforce reintegration. This includes job training, resume-building workshops, interview preparation, and partnerships with local employers for job placements.",
+        "cta": { "text": "Learn More", "href": "/programs#emergency" },
+        "image": "/icons/services/analysis.png"
       }
 
-    ]
-  },
-  "services": {
-    "title": "Services We Offer",
-    "subtitle": "Accessible Resources When You Need Them Most",
-    "intro": "Our services are designed to be accessible, respectful, and responsive to your unique situation. All services are provided at no cost or on a sliding scale based on ability to pay.",
-    "categories": [
-      {
-        "name": "Direct Services",
-        "items": [
-          "Individual & Family Counseling",
-          "Food Pantry & Hot Meals",
-          "Clothing & Household Items",
-          "Transportation Assistance",
-          "Technology Access & Digital Literacy"
-        ]
-      },
-      {
-        "name": "Educational Support",
-        "items": [
-          "Tutoring & Academic Support",
-          "GED Preparation",
-          "English Language Learning (ESL)",
-          "Financial Literacy Workshops",
-          "Parenting Classes"
-        ]
-      },
-      {
-        "name": "Career Development",
-        "items": [
-          "Resume & Cover Letter Writing",
-          "Interview Coaching",
-          "Professional Certifications",
-          "Networking Events",
-          "Small Business Support"
-        ]
-      },
-      {
-        "name": "Resource Navigation",
-        "items": [
-          "Housing Assistance Referrals",
-          "Healthcare Enrollment Support",
-          "Legal Aid Connections",
-          "Childcare Resources",
-          "Benefits Application Help"
-        ]
-      }
     ]
   },
   "faq": {

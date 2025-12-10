@@ -241,7 +241,7 @@ export default function HomePage() {
                   asChild
                   size="lg"
                   variant={index === 0 ? "default" : "outline"}
-                  className={index === 0 ? "bg-emerald-700 hover:bg-emerald-800 text-white" : ""}
+                  className={index === 0 ? "bg-pink-300 hover:bg-pink-400 text-white" : ""}
                 >
                   <Link href={button.href}>{button.text}</Link>
                 </Button>

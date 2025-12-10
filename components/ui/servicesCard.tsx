@@ -1,13 +1,8 @@
 import { ArrowRightIcon, Heart, Users, Home, Sparkles, Shield, HandHeart } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import Image from "next/image"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
 
 const ServicesCard = ({ service, index, cardsVisible }: { service: any, index: number, cardsVisible: boolean }) => {
-  // Array of icons to cycle through
-  const icons = [Heart, Users, Home, Sparkles, Shield, HandHeart]
-  const IconComponent = icons[index % icons.length]
 
   return (
     <Card 
@@ -24,7 +19,7 @@ const ServicesCard = ({ service, index, cardsVisible }: { service: any, index: n
 
 <div className="flex w-full flex-col justify-center items-center text-amber-950 py-8">
   <div className="mb-4">
-    <IconComponent className="w-12 h-12 text-pink-300" />
+    <Image src={service.image} alt={service.title} width={50} height={50} className="w-12 h-12 text-pink-300" />
   </div>
   <CardTitle>{service.title}</CardTitle>
   <CardContent>
