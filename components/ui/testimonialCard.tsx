@@ -38,10 +38,10 @@ const TestimonialCard = ({ testimonial, index, cardsVisible }: { testimonial: an
       {
         screen.width < 768 ? (
           <Button asChild variant="outline" className="bg-[#877563] hover:bg-pink-400 text-white mt-4 px-8 py-6">
-            <Link href="/testimonials" className="flex items-center gap-2">
+            {/* <Link href="/testimonials" className="flex items-center gap-2">
               {testimonial.primaryCTA.text}
               <ArrowRightIcon className="w-4 h-4" />
-            </Link>
+            </Link> */}
           </Button>
         ) : null
       }

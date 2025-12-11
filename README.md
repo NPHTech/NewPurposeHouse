@@ -28,3 +28,17 @@ Continue building your app on:
 2. Deploy your chats from the v0 interface
 3. Changes are automatically pushed to this repository
 4. Vercel deploys the latest version from this repository
+
+
+
+
+Uodates to the UI face lift mission
+
+Fonts: DM-sans, Monet
+
+Web page needs to fade in on loading state 
+
+All content needs to phase in a shift up on load 
+
+The stats need to shift or move on scroll 
+

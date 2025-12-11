@@ -19,20 +19,21 @@
     "hero": {
       "image": "/NewPurposeHomeBanner.jpg",
       "title": "HELPING. HEALING. CARING.",
-      "subtitle": "There can be no keener revelation of a society’s soul",
+      "subtitle": "There can be no keener revelation of a society’s soul.",
+      "subtitle2":"We are committed to transforming lives by providing safe housing, structure, and hope for women rebuilding after incarceration or substance abuse",
       "primaryCTA": { "text": "Donate Now", "href": "/donate" },
       "secondaryCTA": { "text": "Learn More", "href": "/about" }
     },
     "mission": {
       "title": "Our Mission",
+      "title2": "We Build Community",
       "content": "New Purpose House is a nonprofit organization in Houston, TX, committed to transforming lives by providing safe housing, structure, and hope for women rebuilding after incarceration or substance abuse. We are more than a program — we are a community where women from all walks of life are given the tools, guidance, and support to heal, rediscover their purpose, and step confidently into a new chapter of independence and stability. The primary objective of New Purpose House is to offer a safe, nurturing, and holistic program that addresses the physical, emotional, and psychological aspects of personal growth and self-sufficiency. We aim to foster a community where women can support each other in their journey to personal development, ultimately helping them to find purpose and become productive members of society."
     },
 
     "stats": [
-      { "icon": "hands-holding-child", "value": "30+", "label": "Help for women years 30 and up" },
-      { "icon": "house-chimney-user", "value": "14", "label": "Residents Spaces availeble" },
-      { "icon": "money-bill-wheat", "value": "7+", "label": "Programs and Services Offered" },
-      { "icon": "people-group", "value": "50+", "label": "Network of volunteers" }
+      { "icon": "hands-holding-child","label": "100 Women Served" },
+      { "icon": "house-chimney-user","label": "Texas Based" },
+      { "icon": "money-bill-wheat", "label": "Woman Owned" }
     ],
     "testimonials": {
       "image": "/NewPurposeHomeBanner.jpg",
