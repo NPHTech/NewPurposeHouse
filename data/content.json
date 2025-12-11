@@ -20,7 +20,7 @@
       "image": "/NewPurposeHomeBanner.jpg",
       "title": "HELPING. HEALING. CARING.",
       "subtitle": "There can be no keener revelation of a society’s soul.",
-      "subtitle2":"We are committed to transforming lives by providing safe housing, structure, and hope for women rebuilding after incarceration or substance abuse",
+      "subtitle2":"We are committed to transforming the lives of women rebuilding after incarceration or substance abuse",
       "primaryCTA": { "text": "Donate Now", "href": "/donate" },
       "secondaryCTA": { "text": "Learn More", "href": "/about" }
     },
@@ -31,9 +31,9 @@
     },
 
     "stats": [
-      { "icon": "hands-holding-child","label": "100 Women Served" },
-      { "icon": "house-chimney-user","label": "Texas Based" },
-      { "icon": "money-bill-wheat", "label": "Woman Owned" }
+      { "icon": "/icons/stats/givinghome.svg","label": "100 Women Served" },
+      { "icon": "/icons/stats/texas.svg","label": "Texas Based" },
+      { "icon": "/icons/stats/whatevenisagender.svg", "label": "Woman Owned" }
     ],
     "testimonials": {
       "image": "/NewPurposeHomeBanner.jpg",

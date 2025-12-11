@@ -16,9 +16,17 @@ import { TimelineSection } from "@/components/ui/timeline"
 export default function HomePage() {
   const missionImageRef = useRef<HTMLDivElement>(null)
   const servicesSectionRef = useRef<HTMLDivElement>(null)
+  const missionSectionRef = useRef<HTMLDivElement>(null)
+  const statsSectionRef = useRef<HTMLDivElement>(null)
+  const testimonialsSectionRef = useRef<HTMLDivElement>(null)
+  const ctaSectionRef = useRef<HTMLDivElement>(null)
   const [scale, setScale] = useState(1.0)
   const [heroTitleVisible, setHeroTitleVisible] = useState(false)
   const [cardsVisible, setCardsVisible] = useState(false)
+  const [missionVisible, setMissionVisible] = useState(false)
+  const [statsVisible, setStatsVisible] = useState(false)
+  const [testimonialsVisible, setTestimonialsVisible] = useState(false)
+  const [ctaVisible, setCtaVisible] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -87,6 +95,47 @@ export default function HomePage() {
     }
   }, [])
 
+  // Helper function to create intersection observers
+  const createObserver = (ref: React.RefObject<HTMLElement | null>, setVisible: (value: boolean) => void) => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setVisible(true)
+          }
+        })
+      },
+      {
+        threshold: 0.05,
+        rootMargin: '0px 0px -200px 0px'
+      }
+    )
+
+    if (ref.current) {
+      observer.observe(ref.current)
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current)
+      }
+    }
+  }
+
+  useEffect(() => {
+    const cleanup1 = createObserver(missionSectionRef, setMissionVisible)
+    const cleanup2 = createObserver(statsSectionRef, setStatsVisible)
+    const cleanup3 = createObserver(testimonialsSectionRef, setTestimonialsVisible)
+    const cleanup4 = createObserver(ctaSectionRef, setCtaVisible)
+
+    return () => {
+      cleanup1()
+      cleanup2()
+      cleanup3()
+      cleanup4()
+    }
+  }, [])
+
   return (
     <>
       <Header />
@@ -146,12 +195,16 @@ export default function HomePage() {
         </div>
 
           {/* Mission Section */}
-          <section className="py-16 px-4 sm:px-8 lg:px-16 relative min-h-[30vh] flex text-center mx-auto bg-[#f0efeb]">
+          <section ref={missionSectionRef} className="py-16 px-4 sm:px-8 lg:px-16 relative min-h-[30vh] flex text-center mx-auto bg-[#f0efeb]">
             <div className="container mx-auto">
               <div className="flex flex-col md:flex-row gap-16">
                 <div className="my-auto flex-1">
-                  <h2 className="text-4xl font-bold mb-6 text-yellow-700 drop-shadow-lg">{content.home.mission.title}</h2>
-                  <p className="text-lg text-black/90 leading-relaxed drop-shadow-md">{content.home.mission.content}</p>
+                  <h2 className={`text-4xl font-bold mb-6 text-yellow-700 transition-all duration-1500 ease-out ${
+                    missionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
+                  }`}>{content.home.mission.title}</h2>
+                  <p className={`text-lg text-black/90 leading-relaxed transition-all duration-1500 ease-out ${
+                    missionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
+                  }`} style={{ transitionDelay: '200ms' }}>{content.home.mission.content}</p>
                 </div>
               </div>
             </div>
@@ -171,13 +224,19 @@ export default function HomePage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 bg-[#f0efeb] p-8 sm:p-12 lg:p-16 rounded-t-lg">
               {/* Text Content */}
               <div className="text-left my-auto">
-                <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-yellow-700">
+                <h2 className={`text-3xl sm:text-4xl font-bold mb-6 text-yellow-700 transition-all duration-1500 ease-out ${
+                  missionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
+                }`}>
                   {content.home.mission.title2}
                 </h2>
-                <p className="text-base sm:text-lg text-black/80 leading-relaxed mb-8">
+                <p className={`text-base sm:text-lg text-black/80 leading-relaxed mb-8 transition-all duration-1500 ease-out ${
+                  missionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
+                }`} style={{ transitionDelay: '200ms' }}>
                   {content.home.mission.content}
                 </p>
-                <button className="bg-pink-300 hover:bg-pink-400 text-white px-6 py-3 rounded-md transition-colors flex items-center gap-2">
+                <button className={`bg-pink-300 hover:bg-pink-400 text-white px-6 py-3 rounded-md transition-all duration-1500 ease-out flex items-center gap-2 ${
+                  missionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
+                }`} style={{ transitionDelay: '400ms' }}>
                   {content.home.hero.secondaryCTA.text}
                   <ArrowRightIcon className="w-4 h-4" />
                 </button>
@@ -189,7 +248,10 @@ export default function HomePage() {
                 {/* Image with scale animation */}
                 <div 
                   ref={missionImageRef}
-                  className="flex-1 w-full md:flex md:justify-center md:items-center overflow-hidden rounded-lg"  
+                  className={`flex-1 w-full md:flex md:justify-center md:items-center overflow-hidden rounded-lg transition-all duration-1500 ease-out ${
+                    missionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
+                  }`}
+                  style={{ transitionDelay: '300ms' }}
                 >
                   <div className="relative w-full h-full overflow-hidden rounded-lg">
                       <Image 
@@ -212,13 +274,17 @@ export default function HomePage() {
         </section>
 
         {/* Stats Section */}
-        <section className=" py-16 px-4 sm:px-8 lg:px-16 bg-primary text-white">
+        <section ref={statsSectionRef} className=" py-16 px-4 sm:px-8 lg:px-16 bg-primary text-white">
           <div className="container mx-auto">
             <div className="grid gap-8 sm:grid-cols-1 lg:grid-cols-3">
               {content.home.stats.map((stat, index) => (
-                <div key={index} className={`flex flex-col items-center justify-center ${index !== content.home.stats.length - 1 ? 'border-r-2 border-white' : ''}`}>
+                <div key={index} className={`flex flex-col items-center justify-center transition-all duration-1500 ease-out ${
+                  index !== content.home.stats.length - 1 ? 'border-r-2 border-white' : ''
+                } ${
+                  statsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
+                }`} style={{ transitionDelay: `${index * 200}ms` }}>
                   {/* <FontAwesomeIcon icon={byPrefixAndName.fas[`${stat.icon}`]} /> */}
-                  <Image src={stat.icon} alt={stat.label} width={50} height={50} />
+                  <Image src={stat.icon} alt={stat.label} width={100} height={50} />
                   <h3 className="text-2xl font-bold text-white">{stat.label}</h3>
                 </div>
               ))}
@@ -234,8 +300,12 @@ export default function HomePage() {
         <section ref={servicesSectionRef} className="py-16 px-4 sm:px-8 lg:px-16 md:py-16 flex items-center bg-white">
           <div className="container mx-auto">
             <div className=" py-16 mx-auto max-w-3xl text-center">
-              <h2 className="text-4xl font-bold mb-6 text-yellow-700 drop-shadow-lg">Our Services</h2>
-              <p className="text-lg text-black/90 leading-relaxed drop-shadow-md">Our services are tailored for women aged 30 and above who are seeking a comprehensive recovery program. This includes women transitioning from inpatient treatment facilities, those with a history of relapse, and individuals in need of a structured sober living environment.</p>
+              <h2 className={`text-4xl font-bold mb-6 text-yellow-700 transition-all duration-1500 ease-out ${
+                cardsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
+              }`}>Our Services</h2>
+              <p className={`text-lg text-black/90 leading-relaxed transition-all duration-1500 ease-out ${
+                cardsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
+              }`} style={{ transitionDelay: '200ms' }}>Our services are tailored for women aged 30 and above who are seeking a comprehensive recovery program. This includes women transitioning from inpatient treatment facilities, those with a history of relapse, and individuals in need of a structured sober living environment.</p>
             </div>
             <div className="grid gap-8 sm:grid-cols-1 lg:grid-cols-3">
               {content.programs.items.map((service, index) => (
@@ -253,12 +323,16 @@ export default function HomePage() {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-16 px-4 sm:px-8 lg:px-16 relative min-h-[30vh] flex items-center mx-auto bg-[#f0efeb]">
+        <section ref={testimonialsSectionRef} className="py-16 px-4 sm:px-8 lg:px-16 relative min-h-[30vh] flex items-center mx-auto bg-[#f0efeb]">
              <div className="container mx-auto">
               <div className="flex flex-col md:flex-row gap-16">
                 <div className="my-auto flex-1 text-left">
-                  <h2 className="text-4xl font-bold mb-6 text-yellow-700 drop-shadow-lg">{content.home.testimonials.title}</h2>
-                  <p className="text-lg text-black/90 leading-relaxed drop-shadow-md">{content.home.testimonials.content}</p>
+                  <h2 className={`text-4xl font-bold mb-6 text-yellow-700 transition-all duration-1500 ease-out ${
+                    testimonialsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
+                  }`}>{content.home.testimonials.title}</h2>
+                  <p className={`text-lg text-black/90 leading-relaxed transition-all duration-1500 ease-out ${
+                    testimonialsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
+                  }`} style={{ transitionDelay: '200ms' }}>{content.home.testimonials.content}</p>
 
                 <div className="mt-12 grid gap-8 sm:grid-cols-1 lg:grid-cols-2">
                   {
@@ -268,7 +342,9 @@ export default function HomePage() {
                 </div>
                   
                 <div className="flex flex-col items-center justify-center">
-                  <Button asChild variant="outline" className="bg-pink-300 hover:bg-pink-400 text-white mt-16 px-8 py-6">
+                  <Button asChild variant="outline" className={`bg-pink-300 hover:bg-pink-400 text-white mt-16 px-8 py-6 transition-all duration-1500 ease-out ${
+                    testimonialsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
+                  }`} style={{ transitionDelay: '400ms' }}>
                     <Link href="/programs">Learn more</Link>
                   </Button>
                 </div>
@@ -278,11 +354,15 @@ export default function HomePage() {
         </section>
 
         {/* Call to Action Section */}
-        <section className="py-16 px-4 sm:px-8 lg:px-16 md:py-24 bg-white">
+        <section ref={ctaSectionRef} className="py-16 px-4 sm:px-8 lg:px-16 md:py-24 bg-white">
           <div className="container mx-auto">
             <div className="mx-auto max-w-3xl text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4 text-yellow-700 drop-shadow-lg">{content.home.callToAction.title}</h2>
-              <p className="text-lg text-muted-foreground">{content.home.callToAction.content}</p>
+              <h2 className={`text-3xl font-bold mb-4 text-yellow-700 transition-all duration-1500 ease-out ${
+                ctaVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
+              }`}>{content.home.callToAction.title}</h2>
+              <p className={`text-lg text-muted-foreground transition-all duration-1500 ease-out ${
+                ctaVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
+              }`} style={{ transitionDelay: '200ms' }}>{content.home.callToAction.content}</p>
             </div>
             <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
               {content.home.callToAction.buttons.map((button, index) => (
@@ -291,7 +371,12 @@ export default function HomePage() {
                   asChild
                   size="lg"
                   variant={index === 0 ? "default" : "outline"}
-                  className={index === 0 ? "bg-pink-300 hover:bg-pink-400 text-white" : ""}
+                  className={`transition-all duration-1500 ease-out ${
+                    index === 0 ? "bg-pink-300 hover:bg-pink-400 text-white" : ""
+                  } ${
+                    ctaVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
+                  }`}
+                  style={{ transitionDelay: `${400 + index * 100}ms` }}
                 >
                   <Link href={button.href}>{button.text}</Link>
                 </Button>

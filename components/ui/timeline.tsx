@@ -1,4 +1,7 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
+import { useEffect, useRef, useState } from "react"
 
 interface TimelineItem {
   label: string
@@ -49,37 +52,76 @@ const timelineItems: TimelineItem[] = [
 ]
 
 const colorClasses = {
-  yellow: "bg-[var(--service-yellow)] text-foreground",
-  blue: "bg-[var(--service-blue)] text-foreground",
-  olive: "bg-[var(--service-olive)] text-background",
+  yellow: "bg-pink-400 text-foreground",
+  blue: "bg-yellow-400 text-foreground",
+  olive: "bg-pink-400 text-background",
   bronze: "bg-accent text-accent-foreground",
 }
 
 export function TimelineSection() {
+  const timelineSectionRef = useRef<HTMLElement>(null)
+  const [timelineVisible, setTimelineVisible] = useState(false)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setTimelineVisible(true)
+          }
+        })
+      },
+      {
+        threshold: 0.05,
+        rootMargin: '0px 0px -200px 0px'
+      }
+    )
+
+    if (timelineSectionRef.current) {
+      observer.observe(timelineSectionRef.current)
+    }
+
+    return () => {
+      if (timelineSectionRef.current) {
+        observer.unobserve(timelineSectionRef.current)
+      }
+    }
+  }, [])
+
   return (
-    <section className={"w-full py-16 md:py-24 lg:py-32"}>
+    <section ref={timelineSectionRef} className={"w-full py-16 lg:py-32 pt-16"}>
       <div className="text-center mb-16">
-        <p className="text-sm font-bold text-accent uppercase tracking-wider mb-2">What We Do</p>
-        <h2 className="text-4xl md:text-5xl font-bold text-balance">To Serve Women Rebuilding Their Lives</h2>
+        <p className={`text-sm font-bold text-accent uppercase tracking-wider mb-2 transition-all duration-1500 ease-out ${
+          timelineVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
+        }`}>What We Do</p>
+        <h2 className={`text-[var(--secondary)] text-3xl sm:text-4xl font-bold text-balance transition-all duration-1500 ease-out ${
+          timelineVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
+        }`} style={{ transitionDelay: '200ms' }}>To Serve Women Rebuilding Their Lives</h2>
       </div>
 
       <div className="max-w-5xl mx-auto space-y-24">
         {timelineItems.map((item, index) => (
           <div
             key={index}
-            className={`grid md:grid-cols-2 gap-8 items-center ${index % 2 === 1 ? "md:grid-flow-dense" : ""}`}
+            className={`grid md:grid-cols-2 items-center 
+              transition-all duration-1500 ease-out ${
+              index % 2 === 1 ? "md:grid-flow-dense" : ""
+            } ${
+              timelineVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
+            }`}
+            style={{ transitionDelay: `${400 + index * 200}ms` }}
           >
             {/* Content */}
-            <div className={index % 2 === 1 ? "md:col-start-2" : ""}>
-              <div className={`inline-block px-6 py-2 rounded-md font-bold text-sm mb-4 ${colorClasses[item.color]}`}>
-                {item.label}
+            <div className={index % 2 === 1 ? "md:col-start-2 border-l-2 border-pink-400" : "border-r-2 border-pink-400"}>
+              <div className="flex items-center">
+                <div className={`inline-block px-6 py-2 rounded-md font-bold text-sm mb-4 ${colorClasses[item.color]}`}>
+                  {item.label}
+                </div>
+                <div className="bg-pink-400 h-0.5 w-full"> </div>
               </div>
               <h3 className="text-3xl font-bold mb-4">{item.title}</h3>
               <p className="text-lg leading-relaxed text-muted-foreground mb-4">{item.description}</p>
-            </div>
-
-            {/* Image */}
-            <div
+              <div
               className={`relative h-[350px] rounded-lg overflow-hidden shadow-lg ${
                 index % 2 === 1 ? "md:col-start-1 md:row-start-1" : ""
               }`}
@@ -89,12 +131,27 @@ export function TimelineSection() {
                 <p className="text-sm font-medium">{item.location}</p>
               </div>
             </div>
+            </div>
           </div>
         ))}
       </div>
-
-      <div className="text-center mt-16">
-        <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+{/* TODO, create a component for CTA sections with background */}
+      <div 
+      className="text-center mt-16 py-16 px-16"
+      style={{
+        transitionDelay: `${1200}ms`,
+        backgroundImage: "url('/images/home/floralprint.jpg')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+      >
+        <Button 
+          size="lg" 
+          className={`bg-accent text-accent-foreground hover:bg-pink-400 transition-all duration-1500 ease-out ${
+            timelineVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
+          }`}
+        >
           Learn About Our Work
         </Button>
       </div>
