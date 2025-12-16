@@ -10,8 +10,13 @@ import content from "@/data/content.json"
 import { ArrowRightIcon } from "lucide-react"
 import TestimonialCard from "@/components/ui/testimonialCard"
 import ServicesCard from "@/components/ui/servicesCard"
-import { DonationCard } from "@/components/donationCard"
+import { DonationCard } from "@/components/ui/donationCard"
 import { TimelineSection } from "@/components/ui/timeline"
+import Hero from "@/components/hero"
+import { ApplyBanner } from "@/components/applyBanner"
+import dynamic from "next/dynamic"
+const CenteredSection = dynamic(() => import('./centeredSection'))
+
 
 export default function HomePage() {
   const missionImageRef = useRef<HTMLDivElement>(null)
@@ -20,6 +25,7 @@ export default function HomePage() {
   const statsSectionRef = useRef<HTMLDivElement>(null)
   const testimonialsSectionRef = useRef<HTMLDivElement>(null)
   const ctaSectionRef = useRef<HTMLDivElement>(null)
+  const newsletterRef = useRef<HTMLDivElement>(null)
   const [scale, setScale] = useState(1.0)
   const [heroTitleVisible, setHeroTitleVisible] = useState(false)
   const [cardsVisible, setCardsVisible] = useState(false)
@@ -27,6 +33,7 @@ export default function HomePage() {
   const [statsVisible, setStatsVisible] = useState(false)
   const [testimonialsVisible, setTestimonialsVisible] = useState(false)
   const [ctaVisible, setCtaVisible] = useState(false)
+  const [newsletterVisible, setNewsletterVisible] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -127,75 +134,27 @@ export default function HomePage() {
     const cleanup2 = createObserver(statsSectionRef, setStatsVisible)
     const cleanup3 = createObserver(testimonialsSectionRef, setTestimonialsVisible)
     const cleanup4 = createObserver(ctaSectionRef, setCtaVisible)
+    const cleanup5 = createObserver(newsletterRef, setNewsletterVisible)
 
     return () => {
       cleanup1()
       cleanup2()
       cleanup3()
       cleanup4()
+      cleanup5()
     }
   }, [])
 
   return (
     <>
       <Header />
+      <ApplyBanner />
       <main className="flex-1">
-        {/* Fixed Background Image Container */}
-        <div 
-          className="fixed-hero-banner"
-          style={{ '--hero-image': `url('${content.home.hero.image}')` } as React.CSSProperties}
-        >
-          {/* Hero Section */}
-          <section className="relative px-16 py-20 md:py-32 max-h-[80vh] flex items-center">
-            <div className="absolute inset-0 bg-hero-overlay"></div>
-            <div className="container mx-auto relative z-10">
-              <div className="flex flex-col lg:flex-row items-start justify-between gap-8 lg:gap-12">
-                <div className="flex-1 sm:justify-center md:text-center lg:text-left">
-                  <h1 
-                    className={`text-5xl sm:text-4xl font-bold tracking-tight text-balance sm:text-6xl mb-6 drop-shadow-lg transition-opacity duration-1000 ease-in ${
-                      heroTitleVisible ? 'opacity-100' : 'opacity-0'
-                    }`}
-                  >
-                    {content.home.hero.title.split(' ').map((word, index) => {
-                      const colors = ['text-white', 'text-pink-300', 'text-orange-300']
-                      return (
-                        <span key={index} className={colors[index % colors.length]}>
-                          {word}
-                          {index < content.home.hero.title.split(' ').length - 1 && ' '}
-                        </span>
-                      );
-                    })}
-                  </h1>
-                  <p className="font-bold text-lg text-white/90 mb-4 text-balance drop-shadow-md">{content.home.hero.subtitle}</p>
-                  <p className="font-bold text-lg text-white/90 mb-8 text-balance drop-shadow-md">{content.home.hero.subtitle2}</p>
-                  <div className="flex flex-row gap-4">
-                    <Button asChild size="lg" className="bg-pink-300 hover:bg-pink-400 text-white">
-                      <Link href="/apply">Join Us</Link>
-                    </Button>
-                    <Button
-                      size="lg"
-                      variant="outline"
-                      className="border-2 border-pink-400 text-pink-400 bg-white/30 hover:bg-pink-400 hover:text-white"
-                      onClick={() => {
-                        window.open('https://buy.stripe.com/8x27sL4Dd3vA1be0XV4F201', '_blank')
-                      }}
-                    >
-                      <Link href="/donate">DONATE</Link>
-                    </Button>
-                  </div>
-                </div>
-                
-                {/* Donation Card - Right side, hidden on small screens */}
-                <div className="hidden lg:block flex-shrink-0">
-                  <DonationCard />
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
+
+        <Hero content={content} heroTitleVisible={heroTitleVisible} />
 
           {/* Mission Section */}
-          <section ref={missionSectionRef} className="py-16 px-4 sm:px-8 lg:px-16 relative min-h-[30vh] flex text-center mx-auto bg-[#f0efeb]">
+          <section id="mission-section" ref={missionSectionRef} className="pt-16 pb-32 px-8 lg:px-32 md:px-8 sm:px-8 relative min-h-[30vh] flex text-center mx-auto bg-[#f0efeb]">
             <div className="container mx-auto">
               <div className="flex flex-col md:flex-row gap-16">
                 <div className="my-auto flex-1">
@@ -212,7 +171,7 @@ export default function HomePage() {
 
         {/* Mission Image Section */}
         <section 
-          className="px-4 sm:px-8 lg:px-16 pt-16 relative min-h-[30vh] flex items-center mx-auto"
+          className="about-section pt-16 px-8 relative min-h-[30vh] flex items-center mx-auto"
           style={{
             backgroundImage: "url('/images/home/floralprint.jpg')",
             backgroundSize: 'cover',
@@ -274,16 +233,15 @@ export default function HomePage() {
         </section>
 
         {/* Stats Section */}
-        <section ref={statsSectionRef} className=" py-16 px-4 sm:px-8 lg:px-16 bg-primary text-white">
+        <section ref={statsSectionRef} className="pt-16 pb-16 px-8 bg-primary text-white">
           <div className="container mx-auto">
             <div className="grid gap-8 sm:grid-cols-1 lg:grid-cols-3">
               {content.home.stats.map((stat, index) => (
                 <div key={index} className={`flex flex-col items-center justify-center transition-all duration-1500 ease-out ${
-                  index !== content.home.stats.length - 1 ? 'border-r-2 border-white' : ''
+                  index !== content.home.stats.length - 1 ? 'lg:border-r-2 md:border-r-none sm:border-r-none border-white' : ''
                 } ${
                   statsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
                 }`} style={{ transitionDelay: `${index * 200}ms` }}>
-                  {/* <FontAwesomeIcon icon={byPrefixAndName.fas[`${stat.icon}`]} /> */}
                   <Image src={stat.icon} alt={stat.label} width={100} height={50} />
                   <h3 className="text-2xl font-bold text-white">{stat.label}</h3>
                 </div>
@@ -294,16 +252,35 @@ export default function HomePage() {
 
         {/* Timeline Section */}
         <TimelineSection />
-
+        
+        <div 
+          ref={newsletterRef}
+          className="text-center py-16 px-8"
+          style={{
+            backgroundImage: "url('/images/home/floralprint.jpg')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
+        >
+          <Button 
+            size="lg" 
+            className={`bg-accent text-accent-foreground hover:bg-pink-400 transition-all duration-1500 ease-out ${
+              newsletterVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
+            }`}
+          >
+            Subscribe to Our Newsletter
+          </Button>
+        </div>
 
         {/* Services Section */}
-        <section ref={servicesSectionRef} className="py-16 px-4 sm:px-8 lg:px-16 md:py-16 flex items-center bg-white">
+        <section id="services-section" ref={servicesSectionRef} className="services-section pt-16 pb-16 px-8 flex items-center bg-white">
           <div className="container mx-auto">
-            <div className=" py-16 mx-auto max-w-3xl text-center">
-              <h2 className={`text-4xl font-bold mb-6 text-yellow-700 transition-all duration-1500 ease-out ${
+            <div className="mx-auto max-w-3xl text-center">
+              <h2 className={`text-4xl font-bold mb-8 text-yellow-700 transition-all duration-1500 ease-out ${
                 cardsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
               }`}>Our Services</h2>
-              <p className={`text-lg text-black/90 leading-relaxed transition-all duration-1500 ease-out ${
+              <p className={`text-lg text-black/90 mb-8 leading-relaxed transition-all duration-1500 ease-out ${
                 cardsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
               }`} style={{ transitionDelay: '200ms' }}>Our services are tailored for women aged 30 and above who are seeking a comprehensive recovery program. This includes women transitioning from inpatient treatment facilities, those with a history of relapse, and individuals in need of a structured sober living environment.</p>
             </div>
@@ -323,38 +300,40 @@ export default function HomePage() {
         </section>
 
         {/* Testimonials Section */}
-        <section ref={testimonialsSectionRef} className="py-16 px-4 sm:px-8 lg:px-16 relative min-h-[30vh] flex items-center mx-auto bg-[#f0efeb]">
-             <div className="container mx-auto">
-              <div className="flex flex-col md:flex-row gap-16">
-                <div className="my-auto flex-1 text-left">
-                  <h2 className={`text-4xl font-bold mb-6 text-yellow-700 transition-all duration-1500 ease-out ${
-                    testimonialsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
-                  }`}>{content.home.testimonials.title}</h2>
-                  <p className={`text-lg text-black/90 leading-relaxed transition-all duration-1500 ease-out ${
-                    testimonialsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
-                  }`} style={{ transitionDelay: '200ms' }}>{content.home.testimonials.content}</p>
-
-                <div className="mt-12 grid gap-8 sm:grid-cols-1 lg:grid-cols-2">
-                  {
-                  content.home.testimonials.items.slice(0, 2).map((testimonial, index) => (
-                    <TestimonialCard key={index} testimonial={testimonial} index={index} cardsVisible={cardsVisible} />
-                  ))}
-                </div>
-                  
-                <div className="flex flex-col items-center justify-center">
-                  <Button asChild variant="outline" className={`bg-pink-300 hover:bg-pink-400 text-white mt-16 px-8 py-6 transition-all duration-1500 ease-out ${
-                    testimonialsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
-                  }`} style={{ transitionDelay: '400ms' }}>
-                    <Link href="/programs">Learn more</Link>
-                  </Button>
-                </div>
-                </div>
+        <section 
+          ref={testimonialsSectionRef} 
+          className="pt-16 pb-16 px-8 relative min-h-[60vh] flex items-center mx-auto"
+          style={{
+            backgroundImage: "url('/NewPurposeHomeBanner.jpg')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
+        >
+          
+          {/* Faded overlay */}
+          <div className="absolute inset-0 bg-white/60 backdrop-blur-[2px]"></div>
+          
+          <div className="container mx-auto relative z-10">
+            <div className="max-w-4xl mx-auto">
+              <h2 className={`text-4xl font-bold mb-12 text-center text-yellow-700 transition-all duration-1500 ease-out ${
+                testimonialsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
+              }`}>{content.home.testimonials.title}</h2>
+              <p className={`text-lg text-black/90 mb-8 leading-relaxed transition-all duration-1500 ease-out ${
+                cardsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
+              }`} style={{ transitionDelay: '200ms' }}>Our services are tailored for women aged 30 and above who are seeking a comprehensive recovery program. This includes women transitioning from inpatient treatment facilities, those with a history of relapse, and individuals in need of a structured sober living environment.</p>
+               
+              <div className="space-y-6">
+                {content.home.testimonials.items.slice(0, 2).map((testimonial, index) => (
+                  <TestimonialCard key={index} testimonial={testimonial} index={index} cardsVisible={testimonialsVisible} />
+                ))}
               </div>
             </div>
+          </div>
         </section>
 
         {/* Call to Action Section */}
-        <section ref={ctaSectionRef} className="py-16 px-4 sm:px-8 lg:px-16 md:py-24 bg-white">
+        <section id="contact-section" ref={ctaSectionRef} className="pt-16 pb-16 px-8 bg-white">
           <div className="container mx-auto">
             <div className="mx-auto max-w-3xl text-center mb-12">
               <h2 className={`text-3xl font-bold mb-4 text-yellow-700 transition-all duration-1500 ease-out ${

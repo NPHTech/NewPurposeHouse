@@ -14,13 +14,13 @@ export default function ApplyPage() {
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="py-16 md:py-24 bg-muted/30">
+        <section className="py-16 md:py-24 bg-white">
           <div className="container">
             <div className="mx-auto max-w-3xl text-center">
-              <h1 className="text-4xl font-bold tracking-tight mb-4">{content.apply.title}</h1>
+              <h1 className="text-4xl font-bold tracking-tight mb-4 text-yellow-700">{content.apply.title}</h1>
               <p className="text-xl text-muted-foreground mb-4">{content.apply.subtitle}</p>
               <p className="text-muted-foreground mb-4">{content.apply.intro}</p>
-              <div className="rounded-lg bg-emerald-700/10 p-4 text-sm text-emerald-800 border border-emerald-700/20">
+              <div className="rounded-lg bg-pink-300/10 p-4 text-sm text-pink-800 border border-pink-300/20">
                 {content.apply.notice}
               </div>
             </div>
@@ -31,15 +31,15 @@ export default function ApplyPage() {
         <section className="py-16 md:py-24">
           <div className="container">
             <div className="mx-auto max-w-3xl">
-              <Card>
+              <Card className="bg-white">
                 <CardHeader>
-                  <CardTitle>Service Application</CardTitle>
+                  <CardTitle className="text-yellow-700">Service Application</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <form className="space-y-8">
                     {content.apply.formSections.map((section, sectionIndex) => (
                       <div key={sectionIndex} className="space-y-4">
-                        <h3 className="text-lg font-semibold border-b pb-2">{section.title}</h3>
+                        <h3 className="text-lg font-semibold border-b pb-2 text-yellow-700">{section.title}</h3>
                         <div className="grid gap-4 sm:grid-cols-2">
                           {section.fields.map((field, fieldIndex) => (
                             <div
@@ -90,7 +90,7 @@ export default function ApplyPage() {
                       </div>
                     ))}
 
-                    <Button type="submit" className="w-full bg-emerald-700 hover:bg-emerald-800 text-white" size="lg">
+                    <Button type="submit" className="w-full bg-pink-300 hover:bg-pink-400 text-white" size="lg">
                       Submit Application
                     </Button>
                     <p className="text-xs text-muted-foreground text-center">

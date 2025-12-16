@@ -8,11 +8,10 @@
   "navigation": {
     "links": [
       { "label": "Home", "href": "/" },
-      { "label": "About", "href": "/about" },
-      { "label": "Programs", "href": "/programs" },
-      { "label": "Services", "href": "/services" },
-      { "label": "FAQ", "href": "/faq" },
-      { "label": "Contact", "href": "/contact" }
+      { "label": "Mission", "href": "#mission-section" },
+      { "label": "Services", "href": "#services-section" },
+      { "label": "Donate", "href": "/donate" },
+      { "label": "Contact", "href": "#contact-section" }
     ]
   },
   "home": {
@@ -42,15 +41,15 @@
       "primaryCTA": { "text": "See more", "href": "/about" },
       "items": [
         { 
-          "title": "Testimonial 1",
+          "title": "Jane Smith, Age 25",
           "thumbnail": "/images/home/testimonial_one.png", 
-          "content": "This is yada yada and she really loves the organization", 
+          "content": "New Purpose Recovery House has been a lifesaver for me. The staff is incredibly supportive and the program has given me the tools I need to rebuild my life.", 
           "video": "/NewPurposeHomeBanner.jpg"
         },
         { 
-          "title": "Testimonial 2",
+          "title": "Jane Smith, Age 30",
           "thumbnail": "/images/home/testimonial_two.png", 
-          "content": "This is yada yada and she really loves the organization", 
+          "content": "New Purpose Recovery House has been a lifesaver for me. The staff is incredibly supportive and the program has given me the tools I need to rebuild my life.", 
           "video": "/NewPurposeHomeBanner.jpg"
         },
         { 
@@ -65,9 +64,9 @@
       "title": "Ready to Make a Difference?",
       "content": "Whether you want to volunteer, donate, or apply for our programs, we're here to help you get started.",
       "buttons": [
-        { "text": "See our value proposition", "href": "/programs" },
         { "text": "Apply to join us", "href": "/apply" },
-        { "text": "Donate to support our mission", "href": "/donate" }
+        { "text": "Support our mission", "href": "/donate" },
+        { "text": "Follow the Newsletter", "href": "/donate" }
       ]
     }
   },

@@ -7,7 +7,7 @@ const ServicesCard = ({ service, index, cardsVisible }: { service: any, index: n
   return (
     <Card 
     key={index} 
-    className={`flex flex-col md:flex-row text-center shadow-lg transition-all duration-1500 ease-out ${
+    className={`flex flex-col md:flex-row text-center shadow-lg bg-pink-300 transition-all duration-1500 ease-out ${
     cardsVisible 
         ? 'opacity-100 translate-y-0' 
         : 'opacity-0 translate-y-20'
@@ -17,7 +17,7 @@ const ServicesCard = ({ service, index, cardsVisible }: { service: any, index: n
     }}
 >
 
-<div className="flex w-full flex-col justify-center items-center text-amber-950 py-8">
+<div className="flex w-full flex-col justify-center items-center text-white py-8">
   <div className="mb-4">
     <Image src={service.image} alt={service.title} width={50} height={50} className="w-12 h-12 text-pink-300" />
   </div>

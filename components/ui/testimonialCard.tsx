@@ -1,52 +1,54 @@
 import { ArrowRightIcon } from "lucide-react"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 
 // TODO: Fix the type for testimonials it should not be any
 const TestimonialCard = ({ testimonial, index, cardsVisible }: { testimonial: any, index: number, cardsVisible: boolean }) => {
+  const isEven = index % 2 === 0
+  
   return (
-    <Card 
-        key={index} 
-        className={`relative bg-white flex flex-col md:flex-row shadow-lg transition-all duration-1500 ease-out overflow-hidden group ${
+    <div 
+      className={`group bg-white/95 backdrop-blur-sm flex flex-col items-center gap-4 md:gap-6 p-6 md:p-8 shadow-lg rounded-2xl transition-all duration-1500 ease-out ${
         cardsVisible 
-            ? 'opacity-100 translate-y-0' 
-            : 'opacity-0 translate-y-20'
-        }`}
-        style={{
-        transitionDelay: `${index * 250}ms` // Stagger animation for each card
-        }}
-  >
-    {/* Hover Overlay */}
-    <div className="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out z-10 pointer-events-none"></div>
-    <div className="relative z-0 flex w-full md:w-1/2 overflow-hidden">
-      <Image
-        src={testimonial.thumbnail}
-        alt={testimonial.title}
-        width={50}
-        height={50}
-        className="rounded-t-lg md:rounded-l-lg md:rounded-r-none shadow-lg object-cover transition-transform duration-300 ease-out w-full h-full hover:scale-110"
-      />
-    </div>
+          ? 'opacity-100 translate-y-0' 
+          : 'opacity-0 translate-y-20'
+      }`}
+      style={{
+        transitionDelay: `${index * 250}ms`
+      }}
+    >
+      {/* Profile Picture */}
+      <div className="flex-shrink-0">
+        <div className="w-60 h-60 md:w-60 md:h-60 rounded-full overflow-hidden border-4 border-gray-200">
+          <Image
+            src={testimonial.thumbnail || "/placeholder-user.jpg"}
+            alt={testimonial.name || testimonial.title}
+            width={200}
+            height={200}
+            className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
+            unoptimized
+          />
+        </div>
+      </div>
 
-    <div className="relative z-0 flex w-full md:w-1/2 flex-col justify-center text-amber-950 py-8">
-      <CardTitle>{testimonial.title}</CardTitle>
-      <CardContent>
-        <p>{testimonial.content}</p>
-      </CardContent>
-      {
-        screen.width < 768 ? (
-          <Button asChild variant="outline" className="bg-[#877563] hover:bg-pink-400 text-white mt-4 px-8 py-6">
-            {/* <Link href="/testimonials" className="flex items-center gap-2">
-              {testimonial.primaryCTA.text}
-              <ArrowRightIcon className="w-4 h-4" />
-            </Link> */}
-          </Button>
-        ) : null
-      }
+      {/* Text Content - Centered */}
+      <div className="w-full text-center">
+        <p className="text-base md:text-lg text-black mb-4 leading-relaxed">
+          "{testimonial.content}"
+        </p>
+        <p className="text-sm font-semibold text-black uppercase tracking-wide mb-4">
+          {testimonial.name || testimonial.title}
+          {testimonial.age && `, AGE ${testimonial.age}`}
+        </p>
+        <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <Link href={testimonial.cta?.href || "#"} className="inline-flex items-center gap-2 text-sm font-semibold text-pink-400 hover:text-pink-500 transition-colors">
+            Hear her story
+            <ArrowRightIcon className="w-4 h-4" />
+          </Link>
+        </div>
+      </div>
     </div>
-  </Card>
   )
 }
 

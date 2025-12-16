@@ -1,11 +1,12 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
 import { useEffect, useRef, useState } from "react"
 
 interface TimelineItem {
   label: string
-  color: "yellow" | "blue" | "olive" | "bronze"
+  color: "yellow"|"pink"
   title: string
   description: string
   image: string
@@ -14,60 +15,70 @@ interface TimelineItem {
 
 const timelineItems: TimelineItem[] = [
   {
-    label: "WE HAVE THE INSIGHTS",
+    label: "A HOLISTIC APPROACH",
+    color: "pink",
+    title: "Unique Value Proposition",
+    description:
+      "New Purpose Recovery House stands out due to its holistic approach to recovery, combining evidence-based practices with personalized care. Our focus on empowering women through education, life skills training, and community support ensures a comprehensive and sustainable recovery process that helps women find their purpose and re-enter society as productive individuals.",
+    image: "/images/home/family_photo.jpg",
+    location: "Houston, TX",
+  },
+  {
+    label: "A TRANQUIL ENVIRONMENT",
     color: "yellow",
-    title: "Research For Solutions",
+    title: "Comfortable Living Spaces",
     description:
-      "We listen to community members and share their stories and ideas. Their voices help shape real solutions and guide us toward meaningful impact.",
-    image: "/community-research-listening-session.jpg",
-    location: "Local Communities",
+      "Located in a serene neighborhood of Houston, TX, our facility provides a tranquil and conducive environment for recovery. The house is equipped with modern amenities, comfortable living spaces, and dedicated areas for therapy and group activities, all designed to support the healing process.",
+    image: "/images/home/texasneighborhood.jpg",
+    location: "Houston, TX",
   },
   {
-    label: "WE HAVE THE RELATIONSHIPS",
-    color: "blue",
-    title: "Local Roots, National Impact",
+    label: "COMMUNITY SUPPORT",
+    color: "pink",
+    title: "Community Partnerships",
     description:
-      "Our leaders are passionate community members. We learn from them every day—turning local wisdom into national action.",
-    image: "/community-leader-portrait-smiling.jpg",
-    location: "Nationwide",
-  },
-  {
-    label: "WE HAVE THE SCALE",
-    color: "olive",
-    title: "Comprehensive Distribution",
-    description:
-      "We're one of the nation's most effective networks. We mobilize resources quickly, safely and reliably to communities where people need it most.",
-    image: "/community-outreach-volunteer-smiling-outdoors.jpg",
-    location: "Multiple States",
+      "We collaborate with local healthcare providers, community organizations, and employers to create a robust support network for our residents. These partnerships enable us to offer comprehensive services and opportunities for our residents to reintegrate into society successfully.",
+    image: "/images/home/community.jpg",
+    location: "Houston, TX",
   },
   {
     label: "WE HAVE THE VISION",
-    color: "bronze",
+    color: "yellow",
     title: "Support for Every Individual",
     description:
-      "We help provide comprehensive support and education to people rebuilding their lives. Everyone deserves dignity and opportunity.",
-    image: "/person-smiling-hopeful-future-community-center.jpg",
-    location: "National Reach",
+      "Our vision is to expand our reach and impact by establishing additional recovery houses across Texas and beyond. We aim to become a leading provider of women’s recovery services, known for our compassionate care and successful outcomes. By helping women find their purpose and become productive members of society, we strive to create lasting change and brighter futures for our residents.",
+    image: "/images/home/acrosstheworld.jpg",
+    location: "Houston, TX",
   },
+   {
+    label: "Financing and Funding",
+    color: "pink",
+    title: "Our Financial Model",
+    description:
+      "New Purpose Recovery House operates on a combination of private funding, grants, and resident fees. We offer a sliding scale fee structure to ensure our services are accessible to women from various socioeconomic backgrounds.",
+    image: "/images/home/finance.jpg",
+    location: "Houston, TX",
+  }
 ]
 
 const colorClasses = {
-  yellow: "bg-pink-400 text-foreground",
-  blue: "bg-yellow-400 text-foreground",
-  olive: "bg-pink-400 text-background",
-  bronze: "bg-accent text-accent-foreground",
+  yellow: "bg-[#fdf1d3] text-foreground",
+  pink: "bg-pink-400 text-background",
 }
 
 export function TimelineSection() {
-  const timelineSectionRef = useRef<HTMLElement>(null)
-  const [timelineVisible, setTimelineVisible] = useState(false)
+  const headerRef = useRef<HTMLDivElement>(null)
+  const [headerVisible, setHeaderVisible] = useState(false)
+  const itemRefs = useRef<(HTMLDivElement | null)[]>([])
+  const [itemVisible, setItemVisible] = useState<boolean[]>(new Array(timelineItems.length).fill(false))
 
+  // Observer for header section
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setTimelineVisible(true)
+            setHeaderVisible(true)
           }
         })
       },
@@ -77,83 +88,111 @@ export function TimelineSection() {
       }
     )
 
-    if (timelineSectionRef.current) {
-      observer.observe(timelineSectionRef.current)
+    if (headerRef.current) {
+      observer.observe(headerRef.current)
     }
 
     return () => {
-      if (timelineSectionRef.current) {
-        observer.unobserve(timelineSectionRef.current)
+      if (headerRef.current) {
+        observer.unobserve(headerRef.current)
       }
     }
   }, [])
 
+  // Observers for each timeline item
+  useEffect(() => {
+    const observers: IntersectionObserver[] = []
+
+    itemRefs.current.forEach((ref, index) => {
+      if (ref) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                setItemVisible((prev) => {
+                  const newState = [...prev]
+                  newState[index] = true
+                  return newState
+                })
+              }
+            })
+          },
+          {
+            threshold: 0.05,
+            rootMargin: '0px 0px -200px 0px'
+          }
+        )
+        observer.observe(ref)
+        observers.push(observer)
+      }
+    })
+
+    return () => {
+      observers.forEach((observer) => observer.disconnect())
+    }
+  }, [])
+
   return (
-    <section ref={timelineSectionRef} className={"w-full py-16 lg:py-32 pt-16"}>
-      <div className="text-center mb-16">
-        <p className={`text-sm font-bold text-accent uppercase tracking-wider mb-2 transition-all duration-1500 ease-out ${
-          timelineVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
-        }`}>What We Do</p>
+    <section className={"w-full pt-16 px-8"}>
+      <div ref={headerRef} className="text-center mb-16">
+        <p className={`text-pink-400 text-sm font-bold text-accent uppercase tracking-wider mb-2 transition-all duration-1500 ease-out ${
+          headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
+        }`}>We Stand Committed</p>
         <h2 className={`text-[var(--secondary)] text-3xl sm:text-4xl font-bold text-balance transition-all duration-1500 ease-out ${
-          timelineVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
+          headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
         }`} style={{ transitionDelay: '200ms' }}>To Serve Women Rebuilding Their Lives</h2>
       </div>
 
-      <div className="max-w-5xl mx-auto space-y-24">
+      <div className="max-w-5xl mx-auto relative">
+        {/* Vertical line down the middle */}
+        <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-pink-400 transform -translate-x-1/2 z-0"></div>
+        
         {timelineItems.map((item, index) => (
           <div
             key={index}
-            className={`grid md:grid-cols-2 items-center 
+            ref={(el) => { itemRefs.current[index] = el }}
+            className={`pb-16 grid md:grid-cols-2 items-center 
               transition-all duration-1500 ease-out ${
               index % 2 === 1 ? "md:grid-flow-dense" : ""
             } ${
-              timelineVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
+              itemVisible[index] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
             }`}
-            style={{ transitionDelay: `${400 + index * 200}ms` }}
           >
             {/* Content */}
             <div className={index % 2 === 1 ? "md:col-start-2 border-l-2 border-pink-400" : "border-r-2 border-pink-400"}>
-              <div className="flex items-center">
-                <div className={`inline-block px-6 py-2 rounded-md font-bold text-sm mb-4 ${colorClasses[item.color]}`}>
-                  {item.label}
-                </div>
-                <div className="bg-pink-400 h-0.5 w-full"> </div>
+
+            <div className={`flex items-center ${index % 2 === 1 ? '' : 'justify-end'}`}>
+              <div className={`bg-pink-400 h-0.5 ${index % 2 === 1 ? 'order-1' : 'order-2'} ${index % 2 === 1 ? 'w-full' : 'w-full ml-4'}`}> </div>
+              <div className={`inline-block px-6 py-2 rounded-md font-bold text-sm mb-4 ${colorClasses[item.color]} ${index % 2 === 1 ? 'order-2' : 'order-1'}`}>
+                {item.label}
               </div>
+            </div>
+
+            <div className={index % 2 === 1 ? "pl-15" : "pr-15"}>
               <h3 className="text-3xl font-bold mb-4">{item.title}</h3>
               <p className="text-lg leading-relaxed text-muted-foreground mb-4">{item.description}</p>
+             
               <div
               className={`relative h-[350px] rounded-lg overflow-hidden shadow-lg ${
                 index % 2 === 1 ? "md:col-start-1 md:row-start-1" : ""
               }`}
             >
-              <img src={item.image || "/placeholder.svg"} alt={item.title} className="h-full w-full object-cover" />
-              <div className="absolute bottom-4 left-4 bg-background/90 px-4 py-2 rounded-md">
+              <Image 
+                src={item.image || "/placeholder.svg"} 
+                alt={item.title} 
+                fill
+                className="object-cover"
+                unoptimized
+              />
+              <div className="absolute bottom-4 left-4 bg-background/90 px-4 py-2 rounded-md z-10">
                 <p className="text-sm font-medium">{item.location}</p>
               </div>
+              </div>
             </div>
+
             </div>
           </div>
         ))}
-      </div>
-{/* TODO, create a component for CTA sections with background */}
-      <div 
-      className="text-center mt-16 py-16 px-16"
-      style={{
-        transitionDelay: `${1200}ms`,
-        backgroundImage: "url('/images/home/floralprint.jpg')",
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
-      }}
-      >
-        <Button 
-          size="lg" 
-          className={`bg-accent text-accent-foreground hover:bg-pink-400 transition-all duration-1500 ease-out ${
-            timelineVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
-          }`}
-        >
-          Learn About Our Work
-        </Button>
       </div>
     </section>
   )
