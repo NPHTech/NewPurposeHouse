@@ -3,12 +3,12 @@ import content from "@/data/content.json"
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-muted/30">
+    <footer className="border-t border-border bg-[#fda5d6] px-16">
       <div className="container py-12">
         <div className="grid gap-8 md:grid-cols-3">
           <div>
             <h3 className="mb-4 text-lg font-semibold">{content.site.name}</h3>
-            <p className="text-sm text-muted-foreground">{content.footer.tagline}</p>
+            <p className="text-sm text-">{content.footer.tagline}</p>
           </div>
 
           <div>

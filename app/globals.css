@@ -3,6 +3,22 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@font-face {
+  font-family: "Playfair Display";
+  src: url("/fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf") format("truetype");
+  font-weight: 400 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  src: url("/fonts/Fira_Sans/FiraSans-Regular.ttf") format("truetype");
+  font-weight: 400 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --background: oklch(0.99 0.005 106);
   --foreground: oklch(0.18 0.02 106);
@@ -10,9 +26,9 @@
   --card-foreground: oklch(0.18 0.02 106);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.18 0.02 106);
-  --primary: oklch(0.45 0.12 164);
+  --primary: oklch(82.3% 0.12 346.018);
   --primary-foreground: oklch(0.99 0.005 106);
-  --secondary: oklch(0.96 0.01 106);
+  --secondary: #c09469;
   --secondary-foreground: oklch(0.18 0.02 106);
   --muted: oklch(0.96 0.01 106);
   --muted-foreground: oklch(0.52 0.02 106);
@@ -46,8 +62,8 @@
   --card-foreground: oklch(0.98 0.005 106);
   --popover: oklch(0.15 0.02 106);
   --popover-foreground: oklch(0.98 0.005 106);
-  --primary: oklch(0.55 0.15 164);
-  --primary-foreground: oklch(0.15 0.02 106);
+  --primary: oklch(82.3% 0.12 346.018);
+  --primary-foreground: oklch(83.3% 0.145 321.434);
   --secondary: oklch(0.25 0.02 106);
   --secondary-foreground: oklch(0.98 0.005 106);
   --muted: oklch(0.25 0.02 106);
@@ -75,7 +91,9 @@
 }
 
 @theme inline {
-  /* optional: --font-sans, --font-serif, --font-mono if they are applied in the layout.tsx */
+  --font-sans: "Fira Sans", sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-mono: "Fira Sans", monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -119,6 +137,38 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
   }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Fixed Hero Banner with Parallax Effect */
+.fixed-hero-banner {
+  position: relative;
+  background-image: var(--hero-image, url('/placeholder.jpg'));
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.bg-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  z-index: 1;
+}
+
+/* Ensure content scrolls over the fixed background */
+.fixed-hero-banner section {
+  position: relative;
+  z-index: 2;
 }
