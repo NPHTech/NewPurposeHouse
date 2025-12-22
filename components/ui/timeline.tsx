@@ -1,6 +1,5 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import { useEffect, useRef, useState } from "react"
 
@@ -189,7 +188,6 @@ export function TimelineSection() {
               </div>
               </div>
             </div>
-
             </div>
           </div>
         ))}

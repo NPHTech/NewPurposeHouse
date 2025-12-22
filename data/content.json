@@ -16,16 +16,18 @@
   },
   "home": {
     "hero": {
-      "image": "/NewPurposeHomeBanner.jpg",
       "title": "HELPING. HEALING. CARING.",
       "subtitle": "There can be no keener revelation of a society’s soul.",
       "subtitle2":"We are committed to transforming the lives of women rebuilding after incarceration or substance abuse",
+      "image": "/images/home/womengroup.jpg",
       "primaryCTA": { "text": "Donate Now", "href": "/donate" },
       "secondaryCTA": { "text": "Learn More", "href": "/about" }
     },
     "mission": {
       "title": "Our Mission",
       "title2": "We Build Community",
+      "image": "/images/home/NewPurposeImageOne.jpg",
+      "image2": "/images/home/flowerbanner.jpg",
       "content": "New Purpose House is a nonprofit organization in Houston, TX, committed to transforming lives by providing safe housing, structure, and hope for women rebuilding after incarceration or substance abuse. We are more than a program — we are a community where women from all walks of life are given the tools, guidance, and support to heal, rediscover their purpose, and step confidently into a new chapter of independence and stability. The primary objective of New Purpose House is to offer a safe, nurturing, and holistic program that addresses the physical, emotional, and psychological aspects of personal growth and self-sufficiency. We aim to foster a community where women can support each other in their journey to personal development, ultimately helping them to find purpose and become productive members of society."
     },
 
@@ -34,6 +36,14 @@
       { "icon": "/icons/stats/texas.svg","label": "Texas Based" },
       { "icon": "/icons/stats/whatevenisagender.svg", "label": "Woman Owned" }
     ],
+    "timeline": {
+      "image": "/images/home/flowerbanner.jpg",
+      "content": {
+        "image": "/images/home/timeline_one.jpg",
+        "content": "This is the content for timeline item 2",
+        "image": "/images/home/timeline_two.jpg"
+      }
+    },
     "testimonials": {
       "image": "/NewPurposeHomeBanner.jpg",
       "title": "Testimonials",
@@ -58,6 +68,56 @@
           "content": "This is yada yada and she really loves the organization", 
           "video": "/NewPurposeHomeBanner.jpg"
         } 
+      ]
+    },
+    "programs": {
+      "title": "Offered Services",
+      "subtitle": "Comprehensive Support for Every Stage of Life",
+      "intro": "We offer a wide range of programs designed to address the diverse needs of our community members. Each program is carefully crafted with input from those we serve.",
+      "items": [
+        {
+          "title": "Residential Recovery Program",
+          "description": "A structured living environment with 24/7 support to ensure stability and safety.",
+          "cta": { "text": "Learn More", "href": "/programs#job-training" },
+          "image": "/icons/services/house-1.png"
+        },
+        {
+          "title": "Counseling and Therapy",
+          "description": "Individual and group therapy sessions led by licensed professionals to address underlying challenges and develop effective coping strategies.",
+          "cta": { "text": "Learn More", "href": "/programs#family" },
+          "image": "/icons/services/discussion.png"
+        },
+        {
+          "title": "Life Skills Training",
+          "description": "Workshops and classes focusing on skills such as financial management, job readiness, and personal development to help women become self-sufficient.",
+          "cta": { "text": "Learn More", "href": "/programs#mental-health" },
+          "image": "/icons/services/conference-1.png"
+        },
+        {
+          "title": "Peer Support Groups",
+          "description": "Activities and resources to promote physical health, including fitness classes, nutritional guidance, and mindfulness practices.",
+          "cta": { "text": "Learn More", "href": "/programs#seniors" },
+          "image": "/icons/services/health-care.png"
+        },
+        {
+          "title": "Health and Wellness Programs",
+          "description": "Dedicated courses to support mothers in building parenting skills and fostering positive family relationships.",
+          "cta": { "text": "Learn More", "href": "/programs#emergency" },
+          "image": "/icons/services/wellbeing.png"
+        },
+        {
+          "title": "Parenting Classes",
+          "description": "A program aimed at equipping women with the skills and resources needed for workforce reintegration. This includes job training, resume-building workshops, interview preparation, and partnerships with local employers for job placements.",
+          "cta": { "text": "Learn More", "href": "/programs#emergency" },
+          "image": "/icons/services/care.png"
+        },
+        {
+          "title": "Training to Work Initiatives",
+          "description": "A program aimed at equipping women with the skills and resources needed for workforce reintegration. This includes job training, resume-building workshops, interview preparation, and partnerships with local employers for job placements.",
+          "cta": { "text": "Learn More", "href": "/programs#emergency" },
+          "image": "/icons/services/analysis.png"
+        }
+  
       ]
     },
     "callToAction": {
@@ -90,56 +150,6 @@
       { "title": "Integrity", "description": "We maintain the highest standards of transparency and accountability." },
       { "title": "Empowerment", "description": "We provide tools and resources that enable lasting self-sufficiency." },
       { "title": "Collaboration", "description": "We work together with community partners to maximize our impact." }
-    ]
-  },
-  "programs": {
-    "title": "Offered Services",
-    "subtitle": "Comprehensive Support for Every Stage of Life",
-    "intro": "We offer a wide range of programs designed to address the diverse needs of our community members. Each program is carefully crafted with input from those we serve.",
-    "items": [
-      {
-        "title": "Residential Recovery Program",
-        "description": "A structured living environment with 24/7 support to ensure stability and safety.",
-        "cta": { "text": "Learn More", "href": "/programs#job-training" },
-        "image": "/icons/services/house-1.png"
-      },
-      {
-        "title": "Counseling and Therapy",
-        "description": "Individual and group therapy sessions led by licensed professionals to address underlying challenges and develop effective coping strategies.",
-        "cta": { "text": "Learn More", "href": "/programs#family" },
-        "image": "/icons/services/discussion.png"
-      },
-      {
-        "title": "Life Skills Training",
-        "description": "Workshops and classes focusing on skills such as financial management, job readiness, and personal development to help women become self-sufficient.",
-        "cta": { "text": "Learn More", "href": "/programs#mental-health" },
-        "image": "/icons/services/conference-1.png"
-      },
-      {
-        "title": "Peer Support Groups",
-        "description": "Activities and resources to promote physical health, including fitness classes, nutritional guidance, and mindfulness practices.",
-        "cta": { "text": "Learn More", "href": "/programs#seniors" },
-        "image": "/icons/services/health-care.png"
-      },
-      {
-        "title": "Health and Wellness Programs",
-        "description": "Dedicated courses to support mothers in building parenting skills and fostering positive family relationships.",
-        "cta": { "text": "Learn More", "href": "/programs#emergency" },
-        "image": "/icons/services/wellbeing.png"
-      },
-      {
-        "title": "Parenting Classes",
-        "description": "A program aimed at equipping women with the skills and resources needed for workforce reintegration. This includes job training, resume-building workshops, interview preparation, and partnerships with local employers for job placements.",
-        "cta": { "text": "Learn More", "href": "/programs#emergency" },
-        "image": "/icons/services/care.png"
-      },
-      {
-        "title": "Training to Work Initiatives",
-        "description": "A program aimed at equipping women with the skills and resources needed for workforce reintegration. This includes job training, resume-building workshops, interview preparation, and partnerships with local employers for job placements.",
-        "cta": { "text": "Learn More", "href": "/programs#emergency" },
-        "image": "/icons/services/analysis.png"
-      }
-
     ]
   },
   "faq": {
@@ -264,9 +274,13 @@
     ]
   },
   "donate": {
-    "title": "Make a Donation",
-    "subtitle": "Your Generosity Changes Lives",
-    "intro": "Every donation, no matter the size, makes a real difference in the lives of those we serve. Your support helps us continue providing essential services to thousands of community members each year.",
+    "hero": {
+      "image": "/images/donate/joyfulwoman.jpg",
+      "title": "Make a Donation",
+      "subtitle": "Your Generosity Changes Lives",
+      "intro": "Every donation, no matter the size, makes a real difference in the lives of those we serve. New Purpose Recovery House operates on a combination of private funding, grants, and resident fees. We offer a sliding scale fee structure to ensure our services are accessible to women from various socioeconomic backgrounds. Your support helps us continue providing essential services to thousands of community members each year."
+    },
+    "description": "Every donation, no matter the size, makes a real difference in the lives of those we serve. New Purpose Recovery House operates on a combination of private funding, grants, and resident fees. We offer a sliding scale fee structure to ensure our services are accessible to women from various socioeconomic backgrounds. Your support helps us continue providing essential services to thousands of community members each year.",
     "impact": {
       "title": "Your Impact",
       "examples": [

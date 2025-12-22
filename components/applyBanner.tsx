@@ -1,17 +1,27 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import { X } from "lucide-react"
 
 export function ApplyBanner() {
-  const [isVisible, setIsVisible] = useState(true)
+  const [isVisible, setIsVisible] = useState(false)
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    //SSR: When HomePage is rendered on the server. The banner is not visible until the server mounts the Home Page component. When the page is mounted then the banner is visible. 
+    // Only set visible after component mounts (client-side)
+    // This prevents hydration mismatches when nested in server components
+    setMounted(true)
+    setIsVisible(true)
+  }, [])
 
   const handleDismiss = () => {
     setIsVisible(false)
   }
 
-  if (!isVisible) return null
+  // Don't render until mounted (prevents hydration mismatch)
+  if (!mounted || !isVisible) return null
 
   return (
     <div className="sticky top-16 z-40 w-full bg-pink-300 border-b border-pink-400/20">
