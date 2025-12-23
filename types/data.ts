@@ -9,10 +9,10 @@ export type PageHero = {
 
 export type PageSection = {
   title: string
-  subtitle: string
+  subtitle?: string
   content: string
-  primaryCTA: { text: string; href: string }
-  secondaryCTA: { text: string; href: string }
+  primaryCTA?: { text: string; href: string }
+  secondaryCTA?: { text: string; href: string }
 }
 
 export type PageCallToAction = {

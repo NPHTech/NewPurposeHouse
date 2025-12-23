@@ -4,6 +4,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import Hero from "@/components/hero"
+import CenteredSection from "@/app/centeredSection"
 import content from "@/data/content.json"
 import { useEffect, useState } from "react"
 
@@ -24,10 +25,9 @@ export default function DonatePage() {
       <main className="flex-1">
         {/* Hero Section */}
         <Hero content={content.donate.hero} heroTitleVisible={heroTitleVisible} donateCardVisible={false} />
-
+        <CenteredSection pageContent={content.donate.sections[0]} />
         {/* Coming Soon Section */}
         <section className="mx-auto max-w-3xl py-16 bg-muted/30">
-          <p className="text-center text-muted-foreground mb-8">{content.donate.description}</p>
           <div className="container">
             <div className="mx-auto max-w-3xl">
               <Card className="bg-card">

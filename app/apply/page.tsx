@@ -1,3 +1,5 @@
+"use client"
+
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -6,34 +8,41 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Checkbox } from "@/components/ui/checkbox"
+import Hero from "@/components/hero"
+import CenteredSection from "@/app/centeredSection"
 import content from "@/data/content.json"
+import { useEffect, useState } from "react"
+
 
 export default function ApplyPage() {
+
+  const [heroTitleVisible, setHeroTitleVisible] = useState(false)
+
+  useEffect(() => {
+    // Trigger fade-in animation after component mounts
+    const timer = setTimeout(() => {
+      setHeroTitleVisible(true)
+    }, 100)
+    return () => clearTimeout(timer)
+  }, [])
+
   return (
     <>
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="py-16 md:py-24 bg-white">
-          <div className="container">
-            <div className="mx-auto max-w-3xl text-center">
-              <h1 className="text-4xl font-bold tracking-tight mb-4 text-yellow-700">{content.apply.title}</h1>
-              <p className="text-xl text-muted-foreground mb-4">{content.apply.subtitle}</p>
-              <p className="text-muted-foreground mb-4">{content.apply.intro}</p>
-              <div className="rounded-lg bg-pink-300/10 p-4 text-sm text-pink-800 border border-pink-300/20">
-                {content.apply.notice}
-              </div>
-            </div>
-          </div>
-        </section>
-
+        <Hero content={content.apply.hero} heroTitleVisible={heroTitleVisible} donateCardVisible={false} />
+        <CenteredSection pageContent={content.apply.sections[0]} />
+        <div className="pt-16 px-16 relative text-left flex mx-auto max-w-4xl">
+          <p className="text-muted-foreground mb-8">{content.apply.sections[0].notice}</p>
+        </div>
         {/* Application Form */}
-        <section className="py-16 md:py-24">
-          <div className="container">
+        <section className="py-8 md:py-8">
+          <div className="mx-auto">
             <div className="mx-auto max-w-3xl">
               <Card className="bg-white">
                 <CardHeader>
-                  <CardTitle className="text-yellow-700">Service Application</CardTitle>
+                  <CardTitle className="text-yellow-700">New Purpose House – Application for Services</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <form className="space-y-8">
