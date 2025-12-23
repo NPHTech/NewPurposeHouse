@@ -156,7 +156,7 @@ export default function HomePageClient({ content }: HomePageClientProps) {
       <main className="flex-1">
         <Hero content={content.hero} heroTitleVisible={heroTitleVisible} donateCardVisible={true} />
           {/* Mission Section */}
-          <section id="mission-section" ref={missionSectionRef} className="pt-16 pb-32 px-8 lg:px-32 md:px-8 sm:px-8 relative min-h-[30vh] flex text-center mx-auto bg-[#f0efeb]">
+          <section id="mission-section" ref={missionSectionRef} className="pt-16 pb-32 px-8 lg:px-32 md:px-8 sm:px-8 relative min-h-[30vh] flex text-center mx-auto bg-[#fdf1d3]">
             <div className="container mx-auto">
               <div className="flex flex-col md:flex-row gap-16">
                 <div className="my-auto flex-1">
@@ -182,7 +182,7 @@ export default function HomePageClient({ content }: HomePageClientProps) {
           }}
         >
           <div className="container mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 bg-[#f0efeb] p-8 sm:p-12 lg:p-16 rounded-t-lg">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 bg-white p-8 sm:p-12 lg:p-16 rounded-t-lg">
               {/* Text Content */}
               <div className="text-left my-auto">
                 <h2 className={`text-3xl sm:text-4xl font-bold mb-6 text-yellow-700 transition-all duration-1500 ease-out ${

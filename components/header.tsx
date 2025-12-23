@@ -3,11 +3,38 @@
 import { useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+import { ChevronDown } from "lucide-react"
 import content from "@/data/content.json"
 import Image from "next/image"
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
+  
+  // Home page sections for dropdown - these should navigate to home page with hash
+  const homeSections = [
+    { label: "Mission", href: "/#mission-section" },
+    { label: "Services", href: "/#services-section" },
+  ]
+  
+  // Main navigation items (excluding home page sections and Home)
+  // Contact is also a home page section, so it should link to /#contact-section
+  const mainNavLinks = content.navigation.links
+    .filter(
+      (link) => link.href !== "#mission-section" && link.href !== "#services-section" && link.href !== "/"
+    )
+    .map((link) => {
+      // If it's a contact section link, make sure it goes to home page
+      if (link.href === "#contact-section") {
+        return { ...link, href: "/#contact-section" }
+      }
+      return link
+    })
 
   return (
     <header className="font-mono sticky top-0 z-50 w-full border-b border-border bg-background/95 px-4 md:px-32 backdrop-blur supports-[backdrop-filter]:bg-background/90">
@@ -19,7 +46,26 @@ export function Header() {
 
         {/* Desktop nav */}
         <nav className="hidden items-center gap-6 md:flex">
-          {content.navigation.links.map((link) => (
+          {/* Home dropdown */}
+          <DropdownMenu>
+            <DropdownMenuTrigger className="flex items-center gap-1 text-sm font-medium text-foreground/80 transition-colors hover:text-primary focus:outline-none">
+              Home
+              <ChevronDown className="h-4 w-4" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="start">
+              <DropdownMenuItem asChild>
+                <Link href="/" className="cursor-pointer">Home</Link>
+              </DropdownMenuItem>
+              {homeSections.map((section) => (
+                <DropdownMenuItem key={section.href} asChild>
+                  <Link href={section.href} className="cursor-pointer">{section.label}</Link>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
+
+          {/* Donate and Contact links */}
+          {mainNavLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
@@ -73,16 +119,44 @@ export function Header() {
       {isOpen && (
         <div className="border-t border-border bg-background md:hidden">
           <nav className="container mx-auto flex flex-col gap-2 py-3">
-            {content.navigation.links.map((link) => (
+            {/* Home link */}
+            <Link
+              href="/"
+              className="rounded-md px-2 py-2 text-sm font-bold text-foreground/80 transition-colors hover:bg-accent hover:text-accent-foreground"
+              onClick={() => setIsOpen(false)}
+            >
+              Home
+            </Link>
+            {/* Home page sections */}
+            {homeSections.map((section) => (
+              <Link
+                key={section.href}
+                href={section.href}
+                className="rounded-md px-2 py-2 pl-6 text-sm font-medium text-foreground/80 transition-colors hover:bg-accent hover:text-accent-foreground"
+                onClick={() => setIsOpen(false)}
+              >
+                {section.label}
+              </Link>
+            ))}
+            {/* Other main links */}
+            {mainNavLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="rounded-md px-2 py-2 text-sm font-medium text-foreground/80 transition-colors hover:bg-accent hover:text-accent-foreground"
+                className="rounded-md px-2 py-2 text-sm font-bold text-foreground/80 transition-colors hover:bg-accent hover:text-accent-foreground"
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}
               </Link>
             ))}
+            {/* Apply Now button for mobile */}
+            <Link
+              href="/apply"
+              className="rounded-md px-2 py-2 text-sm font-bold bg-pink-300 hover:bg-pink-400 text-white text-center transition-colors"
+              onClick={() => setIsOpen(false)}
+            >
+              Apply Now
+            </Link>
           </nav>
         </div>
       )}

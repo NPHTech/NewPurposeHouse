@@ -1,23 +1,34 @@
+"use client"
+
+import { useState } from "react"
 import { ArrowRightIcon } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import { VideoModal } from "@/components/ui/videoModal"
 
 // TODO: Fix the type for testimonials it should not be any
 const TestimonialCard = ({ testimonial, index, cardsVisible }: { testimonial: any, index: number, cardsVisible: boolean }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false)
   const isEven = index % 2 === 0
   
+  const handleCardClick = () => {
+    setIsModalOpen(true)
+  }
+  
   return (
-    <div 
-      className={`group bg-white/95 backdrop-blur-sm flex flex-col items-center gap-4 md:gap-6 p-6 md:p-8 shadow-lg rounded-2xl transition-all duration-1500 ease-out ${
-        cardsVisible 
-          ? 'opacity-100 translate-y-0' 
-          : 'opacity-0 translate-y-20'
-      }`}
-      style={{
-        transitionDelay: `${index * 250}ms`
-      }}
-    >
+    <>
+      <div 
+        onClick={handleCardClick}
+        className={`group bg-white/95 backdrop-blur-sm flex flex-col items-center gap-4 md:gap-6 p-6 md:p-8 shadow-lg rounded-2xl transition-all duration-1500 ease-out cursor-pointer hover:shadow-xl ${
+          cardsVisible 
+            ? 'opacity-100 translate-y-0' 
+            : 'opacity-0 translate-y-20'
+        }`}
+        style={{
+          transitionDelay: `${index * 250}ms`
+        }}
+      >
       {/* Profile Picture */}
       <div className="flex-shrink-0">
         <div className="w-60 h-60 md:w-60 md:h-60 rounded-full overflow-hidden border-4 border-gray-200">
@@ -42,13 +53,21 @@ const TestimonialCard = ({ testimonial, index, cardsVisible }: { testimonial: an
           {testimonial.age && `, AGE ${testimonial.age}`}
         </p>
         <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <Link href={testimonial.cta?.href || "#"} className="inline-flex items-center gap-2 text-sm font-semibold text-pink-400 hover:text-pink-500 transition-colors">
+          <div className="inline-flex items-center gap-2 text-sm font-semibold text-pink-400 hover:text-pink-500 transition-colors">
             Hear her story
             <ArrowRightIcon className="w-4 h-4" />
-          </Link>
+          </div>
         </div>
       </div>
-    </div>
+      </div>
+      
+      <VideoModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        videoUrl={testimonial.video}
+        title={testimonial.name || testimonial.title}
+      />
+    </>
   )
 }
 
