@@ -28,7 +28,14 @@
       "title2": "We Build Community",
       "image": "/images/home/NewPurposeImageOne.jpg",
       "image2": "/images/home/flowerbanner.jpg",
-      "content": "New Purpose House is a nonprofit organization in Houston, TX, committed to transforming lives by providing safe housing, structure, and hope for women rebuilding after incarceration or substance abuse. We are more than a program — we are a community where women from all walks of life are given the tools, guidance, and support to heal, rediscover their purpose, and step confidently into a new chapter of independence and stability. The primary objective of New Purpose House is to offer a safe, nurturing, and holistic program that addresses the physical, emotional, and psychological aspects of personal growth and self-sufficiency. We aim to foster a community where women can support each other in their journey to personal development, ultimately helping them to find purpose and become productive members of society."
+      "content": "New Purpose House is a nonprofit organization in Houston, TX, committed to transforming lives by providing safe housing, structure, and hope for women rebuilding after incarceration or substance abuse. We are more than a program — we are a community where women from all walks of life are given the tools, guidance, and support to heal, rediscover their purpose, and step confidently into a new chapter of independence and stability. The primary objective of New Purpose House is to offer a safe, nurturing, and holistic program that addresses the physical, emotional, and psychological aspects of personal growth and self-sufficiency.",
+      "content2": "We foster a community where women can support each other in their journey to personal development, ultimately helping them to find purpose and become productive members of society. We provide: ",
+      "points": [
+        "Safe, stable housing for women rebuilding after incarceration or substance abuse",
+        "Structured, supportive environment that promotes accountability and growth",
+        "Holistic care addressing physical, emotional, and psychological well-being", 
+        "Guidance and mentorship to help women heal and rediscover their purpose"
+      ]
     },
 
     "stats": [
@@ -310,9 +317,17 @@
       ]
     },
     "comingSoon": {
-      "title": "Online Donations Coming Soon",
-      "message": "We're currently setting up secure online donation processing. In the meantime, you can donate by:",
+      "title": "Ways to Donate",
+      "message": "Your support makes a real difference. Choose the donation method that works best for you:",
       "methods": [
+        {
+          "title": "Donate Online with Stripe",
+          "description": "Make a secure donation online using Stripe. Our Stripe payment portal accepts all major credit cards and provides instant confirmation of your donation.",
+          "link": {
+            "text": "Donate with Stripe",
+            "url": "https://donate.stripe.com"
+          }
+        },
         {
           "title": "Mail a Check",
           "description": "Make checks payable to New Purpose House and mail to:\n123 Community Way, Your City, ST 12345"
@@ -329,8 +344,57 @@
     },
     "taxInfo": "New Purpose House is a 501(c)(3) tax-exempt organization. Tax ID: 12-3456789. Your donation is tax-deductible to the fullest extent allowed by law."
   },
+  "programs": {
+    "hero": {
+      "image": "/images/home/flowerbanner.jpg",
+      "title": "Our Programs",
+      "subtitle": "Comprehensive Support for Every Stage of Life",
+      "intro": "We offer a wide range of programs designed to address the diverse needs of our community members. Each program is carefully crafted with input from those we serve."
+    },
+    "sections": [
+      {
+        "title": "Our Programs",
+        "content": "We offer a wide range of programs designed to address the diverse needs of our community members. Each program is carefully crafted with input from those we serve."
+      }
+    ]
+  },
+  "newsletter": {
+    "hero": {
+      "image": "/images/home/flowerbanner.jpg",
+      "title": "Newsletter & Updates",
+      "subtitle": "Stay Connected with New Purpose House",
+      "intro": "Stay up to date with the latest news, announcements, and stories from New Purpose House. Check out our most recent newsletter to see how your support is making a difference—and what’s ahead!"
+    },
+    "sections": [
+      {
+        "title": "Newsletter & Updates",
+        "content": "Stay up to date with the latest news, announcements, and stories from New Purpose House. Our newsletter brings you insights into our programs, success stories, and ways you can get involved."
+      }
+    ],
+    "articles": [
+      {
+        "title": "New Purpose House Celebrates 100 Women Served",
+        "description": "We are thrilled to announce that New Purpose House is currently operating at 100% capacity",
+        "url": "/newsletter/September-2025",
+        "pdf": "/newsletters/newletter_sept.png"
+      },
+      {
+        "title": "Expanding Our Residential Recovery Program",
+        "description": "Due to increased demand and community support, New Purpose House is expanding our Residential Recovery Program to accommodate more women. This expansion includes new facilities, additional staff, and enhanced program offerings to better serve our community.",
+        "url": "/newsletter/program-expansion",
+        "pdf": "/newsletters/newletter_oct.png"
+      }
+    ]
+  },
   "footer": {
     "tagline": "Empowering Communities, Transforming Lives",
+    "links": [
+      { "label": "Home", "href": "/" },
+      { "label": "Apply", "href": "/apply" },
+      { "label": "Donate", "href": "/donate" },
+      { "label": "Programs", "href": "/programs" },
+      { "label": "Contact", "href": "/contact" }
+    ],
     "social": [
       { "platform": "Facebook", "url": "#" },
       { "platform": "Twitter", "url": "#" },

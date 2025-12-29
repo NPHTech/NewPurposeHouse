@@ -193,16 +193,18 @@ export default function HomePageClient({ content }: HomePageClientProps) {
                 <p className={`text-base sm:text-lg text-black/80 leading-relaxed mb-8 transition-all duration-1500 ease-out ${
                   missionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
                 }`} style={{ transitionDelay: '200ms' }}>
-                  {content.mission.content}
+                  {content.mission.content2}
                 </p>
-                <button className={`bg-pink-300 hover:bg-pink-400 text-white px-6 py-3 rounded-md transition-all duration-1500 ease-out flex items-center gap-2 ${
+                <ul className={`text-base sm:text-lg text-black/80 leading-relaxed mb-8 transition-all duration-1500 ease-out list-none space-y-3 ${
                   missionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
-                }`} style={{ transitionDelay: '400ms' }}>
-                  {content.hero.secondaryCTA.text}
-                  <ArrowRightIcon className="w-4 h-4" />
-                </button>
+                }`} style={{ transitionDelay: '200ms' }}>
+                  {content.mission.points.map((point: string, index: number) => (
+                    <li key={index} className="flex items-start before:content-['•'] before:text-pink-400 before:font-bold before:text-2xl before:mr-3 before:leading-none before:mt-1">
+                      {point}
+                    </li>
+                  ))}
+                </ul>
               </div>
-
               {/* Image Container with Brown Background */}
               <div className="relative w-full h-full flex items-center justify-center">
                 
@@ -267,11 +269,9 @@ export default function HomePageClient({ content }: HomePageClientProps) {
         >
           <Button 
             size="lg" 
-            className={`bg-accent text-accent-foreground hover:bg-pink-400 transition-all duration-1500 ease-out ${
-              newsletterVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
-            }`}
+            className={`bg-pink-300 text-accent-foreground hover:bg-pink-400 text-white`}
           >
-            Subscribe to Our Newsletter
+            <Link href="/newsletter">Subscribe to Our Newsletter</Link>
           </Button>
         </div>
 
