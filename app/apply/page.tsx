@@ -26,6 +26,22 @@ export default function ApplyPage() {
     return () => clearTimeout(timer)
   }, [])
 
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>, data: any) => {
+    e.preventDefault()
+
+    console.log("Submitting form data:", data)
+    try {
+      const response = await fetch("/api/email-admin-new-request", {
+        method: "POST",
+        body: JSON.stringify(data),
+      })
+      const result = await response.json()
+      console.log(result)
+    } catch (error) {
+      console.error("Error submitting form:", error)
+    }
+  }
+
   return (
     <>
       <Header />
@@ -99,7 +115,7 @@ export default function ApplyPage() {
                       </div>
                     ))}
 
-                    <Button type="submit" className="w-full bg-pink-300 hover:bg-pink-400 text-white" size="lg">
+                    <Button type="submit" onClick={onSubmit} className="w-full bg-pink-300 hover:bg-pink-400 text-white" size="lg">
                       Submit Application
                     </Button>
                     <p className="text-xs text-muted-foreground text-center">
