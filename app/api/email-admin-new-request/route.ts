@@ -2,6 +2,9 @@ import { NextRequest, NextResponse } from "next/server"
 import nodemailer from "nodemailer"
 
 export async function POST(request: NextRequest) {
+
+    console.log(process.env.SMTP_USER, process.env.SMTP_PASSWORD)
+    
   try {
     // Validate environment variables
     if (!process.env.SMTP_USER || !process.env.SMTP_PASSWORD) {
@@ -29,6 +32,7 @@ export async function POST(request: NextRequest) {
     await transporter.verify()
 
     const body = await request.json()
+    console.log("Received form data:", body)
     const { firstName, lastName, dateOfBirth, email, phone, address, city, state, zipCode, householdSize, additionalInfo } = body
 
     if (!firstName || !lastName || !email || !dateOfBirth || !phone || !address || !city || !state || !zipCode || !householdSize || !additionalInfo) {

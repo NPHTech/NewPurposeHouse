@@ -46,7 +46,7 @@ const Hero = ({ content, heroTitleVisible, donateCardVisible }: HeroProps) => {
                </h1>
                <p className="font-bold text-lg text-white/90 mb-4 text-balance drop-shadow-md">{heroSubtitle}</p>
                <p className="font-bold text-lg text-white/90 mb-8 text-balance drop-shadow-md">{heroSubtitle2}</p>
-               <div className="flex flex-row gap-4">
+               <div className="flex flex-row gap-4 sm:justify-start md:justify-center lg:justify-start">
                  <Button asChild size="lg" className="border-2 border-color-secondary bg-pink-300 hover:bg-pink-400 text-white">
                    <Link href="/apply">Join Us</Link>
                  </Button>

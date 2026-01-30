@@ -6,11 +6,8 @@ import { useEffect, useRef, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import content from "@/data/content.json"
-import { ArrowRightIcon } from "lucide-react"
 import TestimonialCard from "@/components/ui/testimonialCard"
 import ServicesCard from "@/components/ui/servicesCard"
-import { DonationCard } from "@/components/ui/donationCard"
 import { TimelineSection } from "@/components/ui/timeline"
 import Hero from "@/components/hero"
 import { ApplyBanner } from "@/components/applyBanner"
@@ -237,10 +234,10 @@ export default function HomePageClient({ content }: HomePageClientProps) {
         </section>
 
         {/* Stats Section */}
-        <section ref={statsSectionRef} className="pt-16 pb-16 px-8 bg-primary text-white">
+        <section ref={statsSectionRef} className="pt-16 pb-16 px-8 bg-pink-300 text-white">
           <div className="container mx-auto">
             <div className="grid gap-8 sm:grid-cols-1 lg:grid-cols-3">
-              {content.stats.map((stat, index) => (
+              {content.stats.map((stat: any, index: number) => (
                 <div key={index} className={`flex flex-col items-center justify-center transition-all duration-1500 ease-out ${
                   index !== content.stats.length - 1 ? 'lg:border-r-2 md:border-r-none sm:border-r-none border-white' : ''
                 } ${
@@ -326,7 +323,7 @@ export default function HomePageClient({ content }: HomePageClientProps) {
               }`} style={{ transitionDelay: '200ms' }}>Our services are tailored for women aged 30 and above who are seeking a comprehensive recovery program. This includes women transitioning from inpatient treatment facilities, those with a history of relapse, and individuals in need of a structured sober living environment.</p>
                
               <div className="space-y-6">
-                {content.testimonials.items.slice(0, 2).map((testimonial, index) => (
+                {content.testimonials.items.slice(0, 2).map((testimonial: any, index: number) => (
                   <TestimonialCard key={index} testimonial={testimonial} index={index} cardsVisible={testimonialsVisible} />
                 ))}
               </div>
