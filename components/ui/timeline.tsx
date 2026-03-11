@@ -14,16 +14,16 @@ interface TimelineItem {
 
 const timelineItems: TimelineItem[] = [
   {
-    label: "A HOLISTIC APPROACH",
+    label: "A TRANQUIL ENVIRONMENT",
     color: "pink",
-    title: "Unique Value Proposition",
+    title: " A Safe and Supportive Community",
     description:
       "New Purpose Recovery House stands out due to its holistic approach to recovery, combining evidence-based practices with personalized care. Our focus on empowering women through education, life skills training, and community support ensures a comprehensive and sustainable recovery process that helps women find their purpose and re-enter society as productive individuals.",
     image: "/images/home/family_photo.jpg",
     location: "Houston, TX",
   },
   {
-    label: "A TRANQUIL ENVIRONMENT",
+    label: "REBUILDING LIVES",
     color: "yellow",
     title: "Comfortable Living Spaces",
     description:
@@ -36,7 +36,7 @@ const timelineItems: TimelineItem[] = [
     color: "pink",
     title: "Community Partnerships",
     description:
-      "We collaborate with local healthcare providers, community organizations, and employers to create a robust support network for our residents. These partnerships enable us to offer comprehensive services and opportunities for our residents to reintegrate into society successfully.",
+      "New Purpose House works closely with local organizations, employers, treatment providers, and community partners to create a strong support network for our residents. These partnerships help us connect women to employment opportunities, supportive services, counseling resources, and community programs that support long-term stability and successful reintegration.",
     image: "/images/home/community.jpg",
     location: "Houston, TX",
   },
@@ -45,16 +45,16 @@ const timelineItems: TimelineItem[] = [
     color: "yellow",
     title: "Support for Every Individual",
     description:
-      "Our vision is to expand our reach and impact by establishing additional recovery houses across Texas and beyond. We aim to become a leading provider of women’s recovery services, known for our compassionate care and successful outcomes. By helping women find their purpose and become productive members of society, we strive to create lasting change and brighter futures for our residents.",
+      "At New Purpose House, we envision a future where every woman in transition has access to a safe, structured environment that supports her journey toward stability and independence. Our goal is to expand supportive housing opportunities across Texas and beyond, creating spaces where women can rebuild their lives, gain meaningful employment, and rediscover their purpose. By investing in women, we help strengthen families, restore communities, and create lasting change.",
     image: "/images/home/acrosstheworld.jpg",
     location: "Houston, TX",
   },
    {
-    label: "Financing and Funding",
+    label: "A STRUCTURED APPROACH",
     color: "pink",
-    title: "Our Financial Model",
+    title: "Our Services",
     description:
-      "New Purpose Recovery House operates on a combination of private funding, grants, and resident fees. We offer a sliding scale fee structure to ensure our services are accessible to women from various socioeconomic backgrounds.",
+      "New Purpose House serves women in transition who are ready to rebuild their lives with structure, support, and opportunity. Our program provides a stable living environment and access to resources that help women strengthen their independence, develop life skills, gain employment, and move forward with purpose.",
     image: "/images/home/finance.jpg",
     location: "Houston, TX",
   }

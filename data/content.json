@@ -54,19 +54,19 @@
     "testimonials": {
       "image": "/NewPurposeHomeBanner.jpg",
       "title": "Testimonials",
-      "content": "New Purpose Recovery House stands out due to its holistic approach to recovery, combining evidence-based practices with personalized care. Our focus on empowering women through education, life skills training, and community support ensures a comprehensive and sustainable recovery process that helps women find their purpose and re-enter society as productive individuals.",
+      "content": "Your story isn’t over. It’s just getting started  New Purpose House welcomes women in transition—who are ready to break cycles, rebuild their lives, and step into a new chapter of purpose and possibility. Whether coming from incarceration, treatment, or unstable living situations, this is a place where accountability meets opportunity and healing becomes action.",
       "primaryCTA": { "text": "See more", "href": "/about" },
       "items": [
         { 
-          "title": "Jane Smith, Age 25",
+          "title": "Eri N, Age 36",
           "thumbnail": "/images/home/testimonial_one.png", 
-          "content": "New Purpose Recovery House has been a lifesaver for me. The staff is incredibly supportive and the program has given me the tools I need to rebuild my life.", 
+          "content": "This program didn’t just give me a place to stay—it gave me structure, support, and the belief that I could start over.", 
           "video": "/videos/Erichunda_Testimonial.mp4"
         },
         { 
-          "title": "Jane Smith, Age 30",
+          "title": "Tiffany J, Age 41",
           "thumbnail": "/images/home/testimonial_two.png", 
-          "content": "New Purpose Recovery House has been a lifesaver for me. The staff is incredibly supportive and the program has given me the tools I need to rebuild my life.", 
+          "content": "New Purpose House gave me more than a roof—it gave me a second chance to rebuild my life", 
           "video": "/videos/Tiffany_Testimonial.mp4"
         },
         { 
@@ -133,7 +133,7 @@
       "buttons": [
         { "text": "Apply to join us", "href": "/apply" },
         { "text": "Support our mission", "href": "/donate" },
-        { "text": "Follow the Newsletter", "href": "/donate" }
+        { "text": "Contact us", "href": "mailto:info@newpurposehouse.org" }
       ]
     }
   },
@@ -303,7 +303,7 @@
     "sections": [
       {
         "title": "Make a Donation",
-        "content": "Every donation, no matter the size, makes a real difference in the lives of those we serve. New Purpose Recovery House operates on a combination of private funding, grants, and resident fees. We offer a sliding scale fee structure to ensure our services are accessible to women from various socioeconomic backgrounds. Your support helps us continue providing essential services to thousands of community members each year."
+        "content": "Your support helps New Purpose House provide safe, structured housing and life-changing support services for women rebuilding their lives after incarceration, treatment, or unstable living situations. Through your generosity, we are able to offer women a stable environment, life-skills development, employment readiness, and the support they need to create a new path forward.\n Every contribution helps provide essential resources such as housing support, transportation, job readiness programs, personal development workshops, and recovery support services that empower women to build stable and independent futures.\n New Purpose House believes that a past does not disqualify a future, and your support helps make that transformation possible."
       }
     ],  
     "impact": {
@@ -325,24 +325,16 @@
           "description": "Make a secure donation online using Stripe. Our Stripe payment portal accepts all major credit cards and provides instant confirmation of your donation.",
           "link": {
             "text": "Donate with Stripe",
-            "url": "https://donate.stripe.com"
+            "url": "https://buy.stripe.com/8x27sL4Dd3vA1be0XV4F201"
           }
         },
         {
           "title": "Mail a Check",
-          "description": "Make checks payable to New Purpose House and mail to:\n123 Community Way, Your City, ST 12345"
-        },
-        {
-          "title": "Call Us",
-          "description": "Call (555) 123-4567 to donate over the phone with a credit card"
-        },
-        {
-          "title": "Visit in Person",
-          "description": "Stop by our office during business hours to make a donation"
+          "description": "Make checks payable to New Purpose House and mail to:\nNew purpose House 5902 Nancy An St Houston, TX 77009"
         }
       ]
     },
-    "taxInfo": "New Purpose House is a 501(c)(3) tax-exempt organization. Tax ID: 12-3456789. Your donation is tax-deductible to the fullest extent allowed by law."
+    "taxInfo": "New Purpose House is a 501(c)(3) nonprofit organization, and all donations are tax-deductible to the extent allowed by law. Tax ID 33-1921616. Donors will receive a receipt for their contribution for tax purposes."
   },
   "programs": {
     "hero": {

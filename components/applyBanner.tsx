@@ -27,11 +27,11 @@ export function ApplyBanner() {
     <div className="sticky top-16 z-40 w-full bg-pink-300 border-b border-pink-400/20">
       <div className="container mx-auto px-4 md:px-32">
         <div className="flex items-center justify-between py-3">
-          <p className="text-sm md:text-base font-semibold text-white flex-1 text-center md:[text-shadow:none] [text-shadow:0_0_2px_rgba(244,114,182,1),0_0_4px_rgba(244,114,182,0.8)]">
-            Recovery is possible.{" "}
+          <p className="text-sm md:text-base font-semibold text-pink-700 flex-1 text-center md:[text-shadow:none] [text-shadow:0_0_2px_rgba(244,114,182,1),0_0_4px_rgba(244,114,182,0.8)]">
+            A new purpose is possible.{" "}
             <Link 
               href="/apply" 
-              className="underline text-white hover:text-white hover:drop-shadow-[0_0_8px_rgba(244,114,182,1)] transition-all"
+              className="underline text-pink-700 hover:text-white hover:drop-shadow-[0_0_8px_rgba(244,114,182,1)] transition-all"
             >
               Join us and begin your journey today.
             </Link>

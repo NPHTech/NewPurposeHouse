@@ -320,13 +320,16 @@ export default function HomePageClient({ content }: HomePageClientProps) {
               }`}>{content.testimonials.title}</h2>
               <p className={`text-lg text-black/90 mb-8 leading-relaxed transition-all duration-1500 ease-out ${
                 cardsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
-              }`} style={{ transitionDelay: '200ms' }}>Our services are tailored for women aged 30 and above who are seeking a comprehensive recovery program. This includes women transitioning from inpatient treatment facilities, those with a history of relapse, and individuals in need of a structured sober living environment.</p>
+              }`} style={{ transitionDelay: '200ms' }}>Your story isn’t over. It’s just getting started  New Purpose House welcomes women in transition—who are ready to break cycles, rebuild their lives, and step into a new chapter of purpose and possibility. Whether coming from incarceration, treatment, or unstable living situations, this is a place where accountability meets opportunity and healing becomes action.</p>
                
               <div className="space-y-6">
                 {content.testimonials.items.slice(0, 2).map((testimonial: any, index: number) => (
                   <TestimonialCard key={index} testimonial={testimonial} index={index} cardsVisible={testimonialsVisible} />
                 ))}
               </div>
+              <Button asChild variant="outline" className="bg-pink-300 hover:bg-pink-400 text-white mt-16 px-8 py-6">
+                <Link href="/testimonials">View All Testimonials</Link>
+              </Button>
             </div>
           </div>
         </section>
@@ -349,8 +352,8 @@ export default function HomePageClient({ content }: HomePageClientProps) {
                   asChild
                   size="lg"
                   variant={index === 0 ? "default" : "outline"}
-                  className={`transition-all duration-1500 ease-out ${
-                    index === 0 ? "bg-pink-300 hover:bg-pink-400 text-white" : ""
+                  className={`transition-all duration-1500 ease-out border-2 border-color-pink-300 ${
+                    index === 0 ? "bg-pink-300 hover:bg-pink-400 text-white" : "border-2 border-color-pink-300"
                   } ${
                     ctaVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
                   }`}
