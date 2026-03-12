@@ -39,7 +39,7 @@
     },
 
     "stats": [
-      { "icon": "/icons/stats/givinghome.svg","label": "100 Women Served" },
+      { "icon": "/icons/stats/givinghome.svg","label": "50+ Women Served" },
       { "icon": "/icons/stats/texas.svg","label": "Texas Based" },
       { "icon": "/icons/stats/whatevenisagender.svg", "label": "Woman Owned" }
     ],
@@ -83,8 +83,8 @@
       "intro": "We offer a wide range of programs designed to address the diverse needs of our community members. Each program is carefully crafted with input from those we serve.",
       "items": [
         {
-          "title": "Residential Recovery Program",
-          "description": "A structured living environment with 24/7 support to ensure stability and safety.",
+          "title": "Structured Transitional Living",
+          "description": "Structured residential environment designed to support women as they rebuild their lives.",
           "cta": { "text": "Learn More", "href": "/programs#job-training" },
           "image": "/icons/services/house-1.png"
         },
@@ -113,18 +113,11 @@
           "image": "/icons/services/wellbeing.png"
         },
         {
-          "title": "Parenting Classes",
-          "description": "A program aimed at equipping women with the skills and resources needed for workforce reintegration. This includes job training, resume-building workshops, interview preparation, and partnerships with local employers for job placements.",
+          "title": "Employment & Life Skills Development",
+          "description": "New Purpose House provides programs designed to help women build the skills and confidence needed to successfully reenter the workforce. Residents receive support with job readiness, resume development, interview preparation, and connections to local employers and training opportunities that support long-term financial stability and independence.",
           "cta": { "text": "Learn More", "href": "/programs#emergency" },
           "image": "/icons/services/care.png"
-        },
-        {
-          "title": "Training to Work Initiatives",
-          "description": "A program aimed at equipping women with the skills and resources needed for workforce reintegration. This includes job training, resume-building workshops, interview preparation, and partnerships with local employers for job placements.",
-          "cta": { "text": "Learn More", "href": "/programs#emergency" },
-          "image": "/icons/services/analysis.png"
         }
-  
       ]
     },
     "callToAction": {
@@ -371,8 +364,8 @@
         "pdf": "/newsletters/newletter_sept.png"
       },
       {
-        "title": "Expanding Our Residential Recovery Program",
-        "description": "Due to increased demand and community support, New Purpose House is expanding our Residential Recovery Program to accommodate more women. This expansion includes new facilities, additional staff, and enhanced program offerings to better serve our community.",
+        "title": "Expanding Our Residential Program",
+        "description": "Due to increased demand and community support, New Purpose House is expanding our Residential Program to accommodate more women. This expansion includes new facilities, additional staff, and enhanced program offerings to better serve our community.",
         "url": "/newsletter/program-expansion",
         "pdf": "/newsletters/newletter_oct.png"
       }

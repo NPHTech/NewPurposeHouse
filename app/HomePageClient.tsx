@@ -281,7 +281,7 @@ export default function HomePageClient({ content }: HomePageClientProps) {
               }`}>Our Services</h2>
               <p className={`text-lg text-black/90 mb-8 leading-relaxed transition-all duration-1500 ease-out ${
                 cardsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
-              }`} style={{ transitionDelay: '200ms' }}>Our services are tailored for women aged 30 and above who are seeking a comprehensive recovery program. This includes women transitioning from inpatient treatment facilities, those with a history of relapse, and individuals in need of a structured sober living environment.</p>
+              }`} style={{ transitionDelay: '200ms' }}>New Purpose House is designed for women age 30 and older who are ready to rebuild their lives in a structured and supportive environment. Many of the women we serve are transitioning from incarceration, treatment programs, or other life challenges and are seeking stability, accountability, and the opportunity to move forward with purpose.</p>
             </div>
             <div className="grid gap-8 sm:grid-cols-1 lg:grid-cols-3">
               {content.programs.items.map((service, index) => (

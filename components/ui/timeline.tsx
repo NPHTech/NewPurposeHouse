@@ -18,7 +18,7 @@ const timelineItems: TimelineItem[] = [
     color: "pink",
     title: " A Safe and Supportive Community",
     description:
-      "New Purpose Recovery House stands out due to its holistic approach to recovery, combining evidence-based practices with personalized care. Our focus on empowering women through education, life skills training, and community support ensures a comprehensive and sustainable recovery process that helps women find their purpose and re-enter society as productive individuals.",
+      "New Purpose House stands out due to its holistic approach to recovery, combining evidence-based practices with personalized care. Our focus on empowering women through education, life skills training, and community support ensures a comprehensive and sustainable recovery process that helps women find their purpose and re-enter society as productive individuals.",
     image: "/images/home/family_photo.jpg",
     location: "Houston, TX",
   },
